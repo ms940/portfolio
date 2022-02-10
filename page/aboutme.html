@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <title>About me</title>
+</head>
+
+<body>
+    <style>
+        @font-face {
+            font-family: ProximaNova;
+            src: url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_1_0.eot);
+            src: url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_1_0.eot?#iefix) format("embedded-opentype"), url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_1_0.woff2) format("woff2"), url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_1_0.woff) format("woff"), url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_1_0.ttf) format("truetype"), url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_1_0.svg#wf) format("svg");
+            font-weight: 300;
+            font-style: normal
+        }
+        
+        @font-face {
+            font-family: ProximaNova;
+            src: url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_4_0.eot);
+            src: url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_4_0.eot?#iefix) format("embedded-opentype"), url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_4_0.woff2) format("woff2"), url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_4_0.woff) format("woff"), url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_4_0.ttf) format("truetype"), url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_4_0.svg#wf) format("svg");
+            font-weight: 400;
+            font-style: normal
+        }
+        
+        @font-face {
+            font-family: ProximaNova;
+            src: url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_5_0.eot);
+            src: url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_5_0.eot?#iefix) format("embedded-opentype"), url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_5_0.woff2) format("woff2"), url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_5_0.woff) format("woff"), url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_5_0.ttf) format("truetype"), url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_5_0.svg#wf) format("svg");
+            font-weight: 700;
+            font-style: normal
+        }
+        
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            line-height: 1.8em;
+            color: #363636;
+            margin: 0;
+        }
+        
+        a {
+            cursor: crosshair;
+            color: #363636;
+            text-decoration: none;
+        }
+        /*header*/
+        
+        .wrap {
+            width: 100%;
+            height: 100%;
+        }
+        
+        .navbar {
+            font-size: 0.9em;
+            font-weight: 300;
+            color: #0075FF;
+            position: sticky;
+            padding-top: 30px;
+            top: 0;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            align-items: center;
+            padding: 15px 157px;
+            background-color: white;
+        }
+        
+        .navbar_menu {
+            display: flex;
+            padding-left: 0;
+            list-style: none;
+        }
+        
+        .navbar_menu li {
+            padding: 0px 20px;
+        }
+        
+        .navbar_menu li:nth-child(2) {
+            padding-right: 0px;
+        }
+        /*contents*/
+        
+        .wrap {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            line-height: 1.8em;
+            width: 100%;
+            height: auto;
+        }
+        
+        .text1 {
+            width: 70%;
+            min-width: 300px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        
+        .profile p,
+        .t_left p,
+        .t_right p,
+        .skill p {
+            margin: 0;
+            min-width: 300px;
+        }
+        
+        .profile,
+        .skill {
+            flex: 1 200px;
+        }
+        
+        .profile p {
+            width: 70%;
+        }
+        
+        .profile {
+            margin: 0 30px 30px 0;
+        }
+        
+        .text2 {
+            width: 70%;
+            min-width: 300px;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        
+        ul {
+            list-style-type: none;
+        }
+        
+        .t_left {
+            width: 30%;
+        }
+        
+        h1 {
+            width: 70%;
+            min-width: 300px;
+            margin: 0 auto;
+            margin: 100px 0 30px 0;
+        }
+        
+        .h4 h4 {
+            margin-top: 25px;
+        }
+        
+        h4 {
+            color: #0075FF;
+            margin: 38px 0 0 0;
+            line-height: 1.3em;
+        }
+        
+        .title h4 {
+            color: #363636;
+            margin: 25px 0 15px 0;
+        }
+        
+        .title {
+            padding: 10px 0;
+            display: flex;
+            flex-direction: row;
+            border-bottom: 5px solid;
+            border-color: #eeeeee;
+            justify-content: space-between;
+        }
+        
+        .title strong {
+            flex: 1;
+            color: #c4c4c4;
+            padding: 25px 0 15px 0;
+            line-height: 1.3em;
+            text-align: right;
+        }
+        
+        .title,
+        .con,
+        .con2 {
+            width: 70%;
+            min-width: 300px;
+        }
+        
+        .t_left,
+        .t_right {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .t_left {
+            margin-right: 55px;
+        }
+        
+        .con .st strong,
+        .con2 .st strong {
+            display: block;
+            margin-top: 10px;
+        }
+        
+        .con2 {
+            margin-bottom: 100px;
+        }
+        
+        .con .in,
+        .con2 .in {
+            text-indent: 0.8em;
+        }
+        
+        .con .out,
+        .con2 .out {
+            text-indent: -0.8em;
+            margin: 0;
+        }
+        
+        .gray {
+            color: #c4c4c4;
+        }
+        
+        @media screen and (max-width: 768px) {
+            body {
+                margin: 0px;
+            }
+            .wrap {
+                font-size: 0.85em;
+            }
+            .contents {
+                margin: 20px;
+            }
+            .banner {
+                height: 88%;
+            }
+            .navbar {
+                justify-content: center;
+            }
+            .navbar_menu li {
+                font-size: 0.85em;
+                width: 65px;
+                padding: 0px 10px;
+            }
+        }
+    </style>
+
+
+
+    <nav class="navbar">
+        <ul class="navbar_menu">
+            <li><a href="../index.html#here">Portfolio</a></li>
+            <li>About me</li>
+        </ul>
+    </nav>
+
+    <div class="wrap">
+        <h1>김미수</h1>
+        <div class="text1">
+            <div class="profile">
+                <strong>시각디자인학 전공 / 4년차 시각디자이너</strong>
+                <p>고객과 협업자들의 입장을 먼저 우선시하는 디자이너 김미수입니다. 다양한 디자인 스타일과 업무경험, 배움에 흥미를 가지고 열정과 함께 합니다.</p>
+            </div>
+            <div class="skill">
+                <strong>프로그램 스킬</strong>
+                <p>
+                    쿽 익스프레스<br> 인디자인
+                    <br> 일러스트레이터
+                    <br> 포토샵
+                    <br> 피그마
+                </p>
+            </div>
+        </div>
+        <h1>업무 및 경력기술서</h1>
+        <div class="text2">
+            <div class="t_left">
+                <!--waps-->
+                <div class="title">
+                    <h4>(주)웹스 / 전략기획팀</h4> <strong>2021.07 - 2021.11</strong>
+                </div>
+                <div class="con">
+                    <div class="h4">
+                        <h4>01<br>제안서 디자인으로 셀렉샵 입점 성공</h4>
+                    </div>
+                    <strong>필터샤워기 상품 제안서 디자인</strong>
+                    <p>
+                        - 기존 디자이너의 스타일에 맞춰 디자인 진행<br> - 기획자, 마케터, 디자이너의 피드백을 정리하여 수정<br>
+                        <p class="in">-> 에이블리 입점 성공</p>
+                    </p>
+                </div>
+                <div class="con">
+                    <h4>02<br>상세페이지 디자인을 통한 베트남 지사 상품매출 상승</h4>
+                    <strong>소파 상세페이지 기획/디자인</strong>
+                    <p>
+                        - 기존의 상세페이지 개선, 카피라이팅과
+                        <p class="in">디자인 진행</p>
+                        - 상품 연출 사진 보정과 합성
+                    </p>
+                </div>
+                <div class="con">
+                    <h4>03<br>기획자의 부재로 인한 인력부족 커버</h4>
+                    <p>
+                        - 상세페이지 침대 제품군 22종 기획/카피라이팅<br>- 신제품 식탁세트 기획/카피라이팅
+                        <p class="in">(외 디자인작업은 9건 진행)</p>
+                        - 상품촬영 컨셉 제안서 작성 및 레퍼런스 수집
+
+                    </p>
+                </div>
+                <div class="con">
+                    <h4>04<br>쇼핑몰 프로모션 이미지 디자인</h4>
+                    <p>
+                        - 쇼핑몰 메인배너 디자인 3건<br> - 쇼핑몰 상세페이지 상단 홍보 페이지 3건<br> - 쇼핑몰 썸네일 디자인 3건<br> - 카카오플러스친구, 네이버톡톡 홍보 이미지 3건
+                    </p>
+                </div>
+                <div class="con">
+                    <h4>05<br>마케터 보조활동으로 상품 매출 상승 기여</h4>
+                    <strong>매출 저조 상품 대상 라이브커머스 진행</strong>
+                    <p>
+                        - 쇼호스트 선정 참여, 진행 컨셉 기획 참여<br> - sns 콘텐츠 홍보 디자인, 시청자 질문 리스트 검토<br> - 라이브 당일 채팅창을 통해 모니터링 진행<br>
+                        <div class="gray">
+                            <p class="in">-> 시청자처럼 호응하면서 제품의 장점을</p>
+                            <p class="in">시청자에게 어필 함, 시청자의 질문을 유도하기</p>
+                            <p class="in">위해 쇼케스트에게 상품 사용성 질문</p>
+                        </div>
+                    </p>
+                    <div class="st">
+                        <strong>상품 리뷰 작성으로 첫 구매자들 신뢰도 높임</strong>
+                        <p>
+                            - 타기업 제품 리뷰 분석 후 구매자들의 구매조건,
+                            <p class="in">니즈를 파악하고 디자인, 설치방법, 마감처리,</p>
+                            <p class="in">내구성을 소분류하여 사진과 함께 첨부해서 작성</p>
+                            - 단점이 될 수 있는 부분을 장점으로 보완하여 작성
+                            <p class="in">(해당 상품은 현 상품 중에 판매량 1위)</p>
+                        </p>
+                    </div>
+                </div>
+                <div class="con2">
+                    <h4>06<br>웹디자인</h4>
+                    <strong>SNS 홍보 디자인</strong>
+                    <p>
+                        - 기존 디자이너의 스타일에 맞춰 하루 한 컷 업로드
+                    </p>
+                    <div class="st">
+                        <strong>브랜드 쇼핑몰 리디자인 참여</strong>
+                        <p>
+                            - 협업 디자이너와 컨셉 회의, 스토리보드 작성<br> - 서브페이지인 상품 상세페이지, 리뷰, FAQ,
+                            <p class="in">이벤트 게시판 디자인 진행</p>
+                        </p>
+                    </div>
+                </div>
+
+
+                <!--moments-->
+                <div class="title">
+                    <h4>순간과영원 / 디자인팀</h4> <strong>2021.03 - 2021.06</strong>
+                </div>
+                <div class="con">
+                    <div class="h4">
+                        <h4>01<br>기획팀과의 협상을 통해 업무 효율 개선</h4>
+                    </div>
+                    <strong>마감까지 기한 2~3일 확보</strong>
+                    <p>기획이 필요 없이 고객의 요청만으로 진행되는<br> 디자인을 진행할 시, 담당 디자이너와의 1:1 진행으로<br> 왜곡되는 피드백을 예방함으로써 작업시간을<br> 단축하여 마감일까지의 기한 확보.
+                    </p>
+                </div>
+                <div class="con2">
+                    <h4>02<br>앱 디자인 시안을 통해 기업 지원사업 선정</h4>
+                    <strong>시니어들을 위한 여행 앱 기획 및 디자인</strong>
+                    <p>기획팀과의 협업을 통해 사용자 타겟 조사부터<br> 메인화면 UIUX 디자인 시안 진행하여 지원사업 선정<br>
+                        <div class="gray">
+                            (내부사정으로 프로젝트 진행은 하지않았습니다.)
+                        </div>
+                    </p>
+                </div>
+
+
+                <div class="title">
+                    <h4>(주)엔파인 / 프리랜서</h4> <strong>2019.04 -</strong>
+                </div>
+                <div class="con2">
+                    <div class="h4">
+                        <h4>01<br>일러스트레이터 작가 활동</h4>
+                    </div>
+                    <strong>기업에서 요청하는 아트 스타일 소스 제작</strong>
+                    <p>
+                        - 그래픽 타입 일러스트 제작 168컷<br> - 드로잉 타입 일러스트 제작 25컷<br> - 페인팅 타입 일러스트 제작 87컷<br> - 캐릭터 디자인 137컷<br> - 타이포그래피 32컷<br>
+                    </p>
+                </div>
+            </div>
+
+
+
+            <div class="t_right">
+                <!--3.14-->
+                <div class="title">
+                    <h4>(주)삼쩜일사 / 콘텐츠개발팀</h4> <strong>2018.12 - 2021.03</strong>
+                </div>
+                <div class="con">
+                    <div class="h4">
+                        <h4>01<br>기업의 디자인 컨셉을 정립</h4>
+                    </div>
+                    <p>무질서했던 디자인들을 통일시켜<br> 가이드를 제시함으로써 동료 디자이너들의<br> 시안 제작 시간을 단축시킴
+                    </p>
+                </div>
+                <div class="con">
+                    <h4>02<br>제품 사용설명서 개선 후 전화상담 감소</h4>
+                    <p>제품 사용설명서의 가독성과 명확성이<br> 떨어지는 점을 인지하고 리디자인
+                    </p>
+                </div>
+                <div class="con">
+                    <h4>03<br>다양한 코딩교육 콘텐츠 기획을 통해 사용자수 증가</h4>
+                    <strong>새로운 거래처 발생</strong>
+                    <p>
+                        - 코딩 교육 콘텐츠를 기획하여 자사 카페,
+                        <p class="in">블로그에 공유</p>
+                        - 자사 제품 하나로 다양한 교육을 진행할 수
+                        <p class="in">있음을 어필, 이후 유치원 1곳, 초등학교
+                            <p class="in">1곳에서 의뢰 받음</p>
+                        </p>
+                        <div class="st">
+                            <strong>고객과의 활발한 커뮤니케이션</strong>
+                            <p>공식카페에서 콘텐츠에 대한 질문응답으로<br> 기업과 고객간의 커뮤니케이션 기회가 늘어남.
+                            </p>
+                        </div>
+                </div>
+                <div class="con2">
+                    <h4>04<br>홈페이지 개선과 앱 UIUX 디자인</h4>
+                    <strong>자사 홈페이지의 다운로드 페이지 개선</strong>
+                    <p>신제품 출시에 맞춰 다운로드 전용 홈페이지<br> 개설을 기획하고 디자인을 진행.
+                    </p>
+                    <div class="st">
+                        <strong>기존 앱의 리디자인과 신기능 추가 설계</strong>
+                        <p>
+                            - 대중적으로 알려진 ‘스크래치’앱을 기반으로
+                            <p class="in">개선점을 찾아 해결방안을 제시/적용</p>
+                            - 자사의 제품을 제어하는 신기능을 추가하여
+                            <p class="in">기획단계 플로어 차트부터 디자인 진행
+                            </p>
+                    </div>
+                    <div class="st">
+                        <strong>신제품 클라우드 펀딩 프로모션 웹페이지 디자인</strong>
+                        <p>
+                            카피라이팅 제외 기획 및 디자인 진행
+                        </p>
+                    </div>
+                    <div class="st">
+                        <strong공식 홈페이지 기획</strong>
+                            <p>
+                                자사웹과 다운로드 전용 웹을 합치는 통합<br> 웹페이지 기획
+                            </p>
+                    </div>
+                </div>
+
+                <!--gooddesign-->
+                <div class="title">
+                    <h4>굳디자인연구소 / 디자인팀</h4> <strong>2016.12 - 2018.12</strong>
+                </div>
+                <div class="con">
+                    <div class="h4">
+                        <h4>01<br>KAI 한국항공우주산업주식회사 사보, 캘린더 입찰 성공</h4>
+                    </div>
+                    <strong>KAI 사보 입찰 참여</strong>
+                    <p>
+                        - 그래픽 일러스트, 인포그래픽 디자인<br> - 컷툰 제작
+                    </p>
+                    <div class="st">
+                        <strong>KAI VIP 캘린더 입찰 참여</strong>
+                        <p>
+                            일러스트 달력 입찰 6컷 중 3컷 제작으로 참여
+                        </p>
+                    </div>
+                    <div class="st">
+                        <strong>입찰 성공 후 KAI 사보 제작 참여</strong>
+                        <p>
+                            - 매월 호 일러스트를 표지, 인포그래픽 페이지 담당<br> - 그래픽 일러스트가 사용되는 스페셜 페이지 4p 담당
+                        </p>
+                    </div>
+                </div>
+                <div class="con">
+                    <h4>02<br>부산대학교 문창대 매거진 입찰 성공</h4>
+                    <p>
+                        - 포그래픽 및 일러스트로 평가지표 페이지 디자인<br> - 입찰 후 평가지표 페이지 담당 및 전체
+                        <div class="in">페이지 일러스트 제작</div>
+                    </p>
+                </div>
+                <div class="con">
+                    <h4>03<br>대학 홍보 일러스트 스타일 담당 디자인</h4>
+                    <p>
+                        동서대, 경남정보대, 부산대, 유니스트<br> 대학교의 수시모집 및 기타 홍보 포스터 제작
+                    </p>
+                </div>
+                <div class="con">
+                    <h4>04<br>부산시 클린에너지 PPT 고정 디자이너</h4>
+                    <strong>보고서 및 제안서 PPT 제작 3건</strong>
+                    <p>
+                        인포그래픽을 이용하여 가독성이 떨어지는
+                        <br>내용물을 한눈에 보기 좋게 편집 디자인 진행
+                    </p>
+                </div>
+                <div class="con">
+                    <h4>05<br>국립부산과학관 전시 홍보 및 사인 고정 디자이너</h4>
+                    <strong>로봇댄스 쇼 디자인 2회</strong>
+                    <p>
+                        로봇댄스 무대 디자인, 홍보 플랜카드 및 엑스배너 디자인
+                    </p>
+                    <div class="st">
+                        <strong>전시장 안내 사인물 디자인 3회</strong>
+                        <p>전시장 입장 방문객들을 전시 이용안내<br> 및 이동 안내 사인물 디자인
+                        </p>
+                    </div>
+                    <div class="st">
+                        <strong>체험 교육물 디자인</strong>
+                        <p>
+                            - 과학관 캐릭터 스티커 제작<br> - 어린이 전용 입장/교육용 팔찌 디자인
+                        </p>
+                    </div>
+                </div>
+                <div class="con">
+                    <h4>06<br>CI, 브랜딩 담당 디자이너</h4>
+                    <strong>디알엑시온의 파생 기업 디알레포텍 CI 작업</strong>
+                    <p>
+                        - CI 제작, CI 목업 작업<br> - 사원증, 기타 서류물 디자인 제작
+                    </p>
+                    <div class="st">
+                        <strong>실내테니스장 e-tennis 브랜딩 작업</strong>
+                        <p>
+                            - 기존의 BI를 이용한 앰블럼 제작<br> - 공간 그래픽 디자인, 홍보물 디자인 진행
+                        </p>
+                    </div>
+                </div>
+                <div class="con2">
+                    <h4>06<br>웹디자인</h4>
+                    <strong>태양광발전사업/화상영어교육 웹페이지 디자인</strong>
+                    <p>
+                        - 메인, 방문자 서비스를 제외한 모든
+                        <div class="in">서브페이지 디자인 진행</div>
+                    </p>
+                </div>
+                <!--eban-->
+                <div class="title">
+                    <h4>에반산업</h4> <strong>2015.04 - 2015.07</strong>
+                </div>
+                <div class="con2">
+                    <div class="h4">
+                        <h4>01<br>편집디자인 및 도안사 보조 활동</h4>
+                    </div>
+                    <p>
+                        - 브로슈어, 리플렛 디자인<br> - 기능성 신발안창 에어아치 그래픽 디자인<br> - 아식스 신발 도안사 도안수정 보조 업무<br> - 승화전사 출력 담당
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+    <!--wrap-->
+
+    <div class="back">
+        <a href="../index.html#here">
+            <div class="arr2">
+                <div class="arr2-1"></div>
+                <div class="arr2-2"></div>
+            </div>
+        </a>
+</body>
+
+</html>

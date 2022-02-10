@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <title>uiux</title>
+</head>
+
+<body>
+
+    <style>
+        @font-face {
+            font-family: ProximaNova;
+            src: url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_1_0.eot);
+            src: url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_1_0.eot?#iefix) format("embedded-opentype"), url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_1_0.woff2) format("woff2"), url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_1_0.woff) format("woff"), url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_1_0.ttf) format("truetype"), url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_1_0.svg#wf) format("svg");
+            font-weight: 300;
+            font-style: normal
+        }
+        
+        @font-face {
+            font-family: ProximaNova;
+            src: url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_4_0.eot);
+            src: url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_4_0.eot?#iefix) format("embedded-opentype"), url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_4_0.woff2) format("woff2"), url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_4_0.woff) format("woff"), url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_4_0.ttf) format("truetype"), url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_4_0.svg#wf) format("svg");
+            font-weight: 400;
+            font-style: normal
+        }
+        
+        @font-face {
+            font-family: ProximaNova;
+            src: url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_5_0.eot);
+            src: url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_5_0.eot?#iefix) format("embedded-opentype"), url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_5_0.woff2) format("woff2"), url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_5_0.woff) format("woff"), url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_5_0.ttf) format("truetype"), url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_5_0.svg#wf) format("svg");
+            font-weight: 700;
+            font-style: normal
+        }
+        /*webfont*/
+        
+        body,
+        *,
+        a {
+            margin: 0 auto;
+            text-decoration: none;
+            color: #363636;
+        }
+        
+        h1 {
+            font-family: 'ProximaNova';
+            font-size: 2.5em;
+        }
+        
+        h2 {
+            font-family: 'ProximaNova';
+        }
+        
+        p {
+            font-family: 'Noto Sans KR', sans-serif;
+            line-height: 1.8em;
+        }
+        
+        .text {
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight: 400;
+        }
+        
+        #location span {
+            display: block;
+            color: #0075FF;
+            font-weight: bold;
+            padding: 20px 0 200px 3%;
+            font-family: 'ProximaNova';
+        }
+        /*
+      i     {z-index: 2; top: 5%; right: 3%; position: fixed; float: left;
+            transition: all 0.3s ease-in-out; font-size: 2em;}*/
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: 0
+        }
+        
+        .img2 img {
+            margin: 10% 0 5% 0;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            font-size: 0;
+        }
+        
+        .img img {
+            width: 100%;
+            background-color: #eeeeee;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            padding: 0;
+            margin: 0 auto;
+            font-size: 0;
+        }
+        /*
+      .back {display: flex; justify-content: center; align-items: center;}
+      */
+        
+        .arr {
+            width: 40px;
+            height: 40px;
+            border-width: 1px 1px 0 0;
+            border-style: solid;
+            transform: rotate(45deg);
+            transition: all 0.3s ease-in-out;
+        }
+        
+        .arr2 {
+            z-index: 2;
+            top: 5%;
+            right: 3%;
+            transition: all 0.3s ease-in-out;
+            position: fixed;
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.3);
+            float: right;
+        }
+        
+        .arr2-1 {
+            width: 40px;
+            height: 40px;
+            border-width: 0 2px 0 0;
+            border-style: solid;
+            transform: rotate(45deg);
+            position: absolute;
+            bottom: 40%;
+            right: 39%;
+        }
+        
+        .arr2-2 {
+            width: 40px;
+            height: 40px;
+            border-width: 2px 0 0 0;
+            border-style: solid;
+            transform: rotate(45deg);
+            position: absolute;
+            top: 36%;
+            right: 40%;
+        }
+        
+        .next {
+            z-index: 2;
+            bottom: 100px;
+            right: 5%;
+            bottom: 10%;
+            position: fixed;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+        
+        .text {
+            min-width: 280px;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            max-width: 52%;
+            margin-top: 50px;
+        }
+        
+        .text div {
+            flex: 1 40%;
+            min-width: 280px;
+            margin: 35px 10% 0 0;
+        }
+        
+        .text div:last-child {
+            margin-right: 0
+        }
+        
+        .text div:nth-child(2) {
+            margin-right: 0
+        }
+        
+        .text h4 {
+            margin-bottom: 4px;
+        }
+        
+        .t4 .keyword {
+            width: 100%;
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            margin-top: 15px;
+        }
+        
+        .t4 span {
+            display: block;
+            width: 48%;
+            background-color: #EBEBEB;
+            margin-top: 5px;
+            padding: 9px 0;
+            text-align: center;
+        }
+        
+        .use,
+        .title h1 {
+            margin: 0;
+            height: 38px;
+            width: 85px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .title {
+            min-width: 280px;
+            max-width: 52%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .motion {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .motion img {
+            width: 20%;
+            min-width: 100px;
+            margin: 0;
+        }
+        /*contents*/
+        
+        .exp {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 52%;
+            flex-wrap: wrap;
+            padding: 10% 0;
+        }
+        
+        .exp span {
+            font-weight: 100;
+        }
+        
+        .exp h2,
+        .exp2 h2 {
+            margin-bottom: 10px;
+        }
+        
+        .img_text2 {
+            width: 55%;
+            min-width: 300px;
+        }
+        
+        .img_text {
+            width: 45%;
+            min-width: 300px;
+            padding-top: 30px
+        }
+        
+        .exp2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 52%;
+            padding: 5% 0;
+        }
+        
+        .exp3 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 52%;
+            padding: 7% 0 3% 0;
+        }
+        
+        .D_system {
+            min-width: 300px;
+        }
+        
+        @media screen and (max-width: 768px) {
+            .wrap {
+                font-size: 0.85em;
+                margin: 0 auto;
+            }
+            .arr {
+                width: 15px;
+                height: 15px;
+                border-width: 2.5px 2.5px 0 0;
+                transition: all 0.3s ease-in-out;
+            }
+            .next span {
+                display: none;
+            }
+            .next {
+                right: 6%;
+                bottom: 5%;
+            }
+            #location span {
+                padding-bottom: 100px;
+            }
+            .arr2 {
+                z-index: 2;
+                top: 2%;
+                right: 3%;
+                transition: all 0.3s ease-in-out;
+                position: fixed;
+                width: 45px;
+                height: 45px;
+                border-radius: 50%;
+                background-color: rgba(255, 255, 255, 0.3);
+                float: right;
+            }
+            .arr2-1 {
+                width: 33px;
+                height: 33px;
+                border-width: 0 2px 0 0;
+                border-style: solid;
+                transform: rotate(45deg);
+                position: absolute;
+                bottom: 40%;
+                right: 35%;
+            }
+            .arr2-2 {
+                width: 33px;
+                height: 33px;
+                border-width: 2px 0 0 0;
+                border-style: solid;
+                transform: rotate(45deg);
+                position: absolute;
+                top: 36%;
+                right: 37%;
+            }
+            .use {
+                width: 70px;
+            }
+            .use img {
+                width: 45%;
+            }
+            .img {
+                padding-top: 100px;
+            }
+            .D_system {
+                text-align: center;
+            }
+        }
+        /*MEDIA QUERY*/
+    </style>
+
+
+    <div class="wrap">
+        <div id="location"><span>Main work > Ui/Ux > Design</span></div>
+
+        <div class="title">
+            <h1>CCEI</h1><span class="use">
+    <img src="../img/use_1.png">
+    <img src="../img/use_2.png">
+    </span>
+        </div>
+        <div class="text">
+            <div class="t1">
+                <h4>작업 기여도</h4>
+                <p><strong>기획팀</strong>&nbsp;카피라이팅 80%, 웹 구조 설계 80%, 화면 설계 20%<br>
+                    <strong>본인</strong>&nbsp;카피라이팅 10%, 디자인 컨셉 100%, 웹 구조 설계 20%, 화면 설계 80%
+                </p>
+            </div>
+
+            <div class="t2">
+                <h4>클라이언트</h4>
+                <p>해당 사이트는 아이부터 직장인까지 모두 고객이지만 아이와 부모를 주 타겟으로 고리타분하지 않은 분위기를 원합니다. 어린이 교육 이미지에 주황색 컬러가 꼭 사용되었으면 하고 학습커리큘럼을 살펴봄과 더불어 부담없는 상담신청을 강조, 유도 하기를 원합니다.
+                </p>
+            </div>
+
+            <div class="t3">
+                <h4>디자인</h4>
+                <p>주 고객층은 아이 또는 아이를 둔 부모이며 콘텐츠 카피에서 친근함 느껴집니다. 이 점을 고려하여 컬러와 그래픽 요소를 사용한 사진합성을 통해 귀엽고 친근한 컨셉으로 진행했습니다. 정보전달의 오류가 없도록 각 그래픽의 위치와 갯수를 제한하고 시원하고 단조로운 레이아웃을 설계했습니다.
+                </p>
+            </div>
+
+            <div class="t4">
+                <h4>키워드</h4>
+                <div class="keyword">
+                    <span>#귀여운</span><span>#친근한</span><span>#발랄한</span><span>#밝은</span>
+                    <span>#어린이</span><span>#교육</span>
+                </div>
+            </div>
+        </div>
+        <!--TEXT AREA-->
+
+
+
+        <div class="img2">
+            <img src="../img/uiux/ccei/p_ccei1.jpg">
+        </div>
+
+        <div class="exp2">
+            <div class="img_text2">
+                <h2>Children Photo</h2>
+                <p>클라이언트의 요청사항과 디자인 컨셉에 맞춰 아이 사진 위주로 구성했습니다.</p>
+            </div>
+        </div>
+        <div class="img">
+            <img src="../img/uiux/ccei/p_ccei2.jpg">
+        </div>
+        <div class="exp2">
+            <div class="img_text2">
+                <h2>Photo and Graphic</h2>
+                <p>사진과 그래픽의 조합으로 통통튀는 귀엽고 활기찬 분위기의 컨셉을 이어갔습니다.</p>
+            </div>
+        </div>
+        <div class="img">
+            <img src="../img/uiux/ccei/p_ccei3.jpg">
+        </div>
+        <div class="exp">
+            <h1 class="D_system"><span>CCEI</span><br>DESIGN SYSTEM</h1>
+            <div class="img_text">
+                <h2>Site map</h2>
+                <p>메인 페이지에 메인 메뉴들이 섹션별로 나눠지며 교육과정과 고객센터에는 각 서브 메뉴들이 들어갑니다. 클라이언트 니즈 중 상담신청을 강조하고 유도하기 위해 CTA버튼을 추가했습니다.</p>
+            </div>
+        </div>
+        <div class="img">
+            <img src="../img/uiux/ccei/p_ccei4.jpg">
+        </div>
+        <div class="exp3">
+            <div class="img_text2">
+                <h2>Grid System</h2>
+                <p><strong>Collumns</strong> 16 / 72px, <strong>Gutter</strong> 30px, <strong>Margin</strong> 156px
+                </p>
+            </div>
+        </div>
+        <div class="img">
+            <img src="../img/uiux/ccei/p_ccei5.jpg">
+            <img src="../img/uiux/ccei/p_ccei6.jpg">
+        </div>
+        <div class="exp2">
+            <div class="img_text2">
+                <h2>Font and Color</h2>
+                <p>둥글고 역동적인 빙그레체를 메인 폰트로 사용하고 문장에 들어가는 기본 폰트는 노트산스로 통일하여 가독성을 높였습니다. 컬러는 역동적인 디자인 컨셉과 빙그레체와 어울리는 산뜻한 톤으로 잡았습니다. 특히 ‘아이들’에 초점을 맞춘 컨셉으로 서브 컬러에서 여러 색상을 지정했습니다.</p>
+            </div>
+        </div>
+        <div class="img">
+            <img src="../img/uiux/ccei/p_ccei7.jpg">
+        </div>
+
+        <div class="exp2">
+            <div class="img_text2">
+                <h2>Graphic</h2>
+                <p>여우는 어린이 교육 프로그램에서 주로 사용되는 동물로입니다. 대중성이 있으면서 컨셉과 일치하고 홈페이지 컨셉의 메인 색상을 사용할 수 있는 캐릭터를 구상하던 중, 여우를 모티브로 캐릭터를 제작하였습니다. </p>
+            </div>
+        </div>
+        <!--MOTION IMG-->
+        <div class="motion">
+            <img src="../img/uiux/ccei/CCEI_mot_1.gif">
+            <img src="../img/uiux/ccei/CCEI_mot_2.gif">
+            <img src="../img/uiux/ccei/CCEI_mot_3.gif">
+        </div>
+        <!--MOTION IMG-->
+        <div class="img">
+            <img src="../img/uiux/ccei/p_ccei8.jpg">
+        </div>
+        <!--IMG AREA-->
+    </div>
+
+
+
+    <div class="back">
+        <a href="../index.html#here_1">
+            <div class="arr2">
+                <div class="arr2-1"></div>
+                <div class="arr2-2"></div>
+            </div>
+        </a>
+
+    </div>
+
+    <a href="../page/uiux_sunway.html">
+        <div class="next">
+            <span>Next</span>
+            <div class="arr"></div>
+        </div>
+    </a>
+    <!--BUTTEN-->
+</body>
+
+</html>

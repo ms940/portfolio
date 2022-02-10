@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <title>illustration</title>
+</head>
+<body>
+    <style>
+            @font-face {
+    font-family: ProximaNova;
+    src: url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_1_0.eot);
+    src: url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_1_0.eot?#iefix) format("embedded-opentype"),url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_1_0.woff2) format("woff2"),url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_1_0.woff) format("woff"),url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_1_0.ttf) format("truetype"),url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_1_0.svg#wf) format("svg");
+    font-weight: 300;
+    font-style: normal
+  }
+  @font-face {
+    font-family: ProximaNova;
+    src: url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_4_0.eot);
+    src: url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_4_0.eot?#iefix) format("embedded-opentype"),url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_4_0.woff2) format("woff2"),url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_4_0.woff) format("woff"),url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_4_0.ttf) format("truetype"),url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_4_0.svg#wf) format("svg");
+    font-weight: 400;
+    font-style: normal
+  }
+  @font-face {
+    font-family: ProximaNova;
+    src: url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_5_0.eot);
+    src: url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_5_0.eot?#iefix) format("embedded-opentype"),url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_5_0.woff2) format("woff2"),url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_5_0.woff) format("woff"),url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_5_0.ttf) format("truetype"),url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_5_0.svg#wf) format("svg");
+    font-weight: 700;
+    font-style: normal
+  }  
+/*webfont*/
+
+      body, *,a {margin: 0 auto; text-decoration: none; color: #D3D3D3;}
+      h1 {font-family: 'Noto Sans KR', sans-serif; font-size: 2.5em; margin-bottom: 20px;}
+      h2 {font-family: 'Noto Sans KR', sans-serif; color: #D3D3D3;}
+      p {font-family: 'Noto Sans KR', sans-serif; line-height: 1.8em; color: #D3D3D3;}
+      .wrap {background-color: #363636;}
+      #location span {display: block; color: #7A7A7A; font-weight:bold;
+              padding: 20px 0 200px 3%; font-family: 'ProximaNova';}
+      img {max-width: 100%; height: auto;}
+
+       .arr1-2 { width: 40px; height: 40px; border-width: 1px 1px 0 0; border-style: solid;
+        transform: rotate(225deg); transition: all 0.3s ease-in-out;}
+
+
+      .arr2 {z-index: 2; top: 5%; right: 3%; transition: all 0.3s ease-in-out;
+        position: fixed; width: 55px; height: 55px; border-radius: 50%; float:right;}
+      .arr2-1 {width: 40px; height: 40px; border-width: 0 2px 0 0; border-style: solid;
+        transform: rotate(45deg); position: absolute; bottom:40%; right:39%;}
+      .arr2-2 {width: 40px; height: 40px; border-width: 2px 0 0 0; border-style: solid;
+        transform: rotate(45deg); position: absolute; top:36%; right:40%;}
+      .next2 {z-index: 2; left: 5%; bottom: 10%; position: fixed;display: flex;
+            justify-content: flex-start; align-items: center;}  
+      .text {width: 25%; min-width: 320px; display: flex; text-align: center;
+        align-items: flex-start; justify-content:space-between;
+        font-family: 'Noto Sans KR', sans-serif; font-weight: 400; flex-wrap: wrap;}
+      .text div {min-width: 370px;}
+
+      /*contents*/
+
+
+      @media screen and (max-width: 768px){
+      .wrap {font-size: 0.85em; margin: 0 auto;}
+
+        .arr1-2 {width: 15px; height: 15px; border-width: 2.5px 2.5px 0 0;
+          transition: all 0.3s ease-in-out;}
+        .next2 span {display: none; }
+        .next2 {left: 6%; bottom: 5%;}
+        #location span {padding-bottom: 100px;}
+        
+        .arr2 {z-index: 2; top: 2%; right: 3%; transition: all 0.3s ease-in-out;
+            position: fixed; width: 45px; height: 45px; border-radius: 50%; float:right;}
+        .arr2-1 {width: 33px; height: 33px; border-width: 0 2px 0 0; border-style: solid;
+            transform: rotate(45deg); position: absolute; bottom:40%; right:35%;}
+        .arr2-2 {width: 33px; height: 33px; border-width: 2px 0 0 0; border-style: solid;
+            transform: rotate(45deg); position: absolute; top:36%; right:37%;}
+      }
+      </style>
+
+   <div class="wrap">
+    <div id="location"><span>Sub work > Illustration</span></div>
+    <div class="text">
+      <h1>직장인 스트레스</h1>
+      <p>직장인들의 스트레스를 표현한 삽화입니다.
+        손그림 형태의 스타일로 고전적인 분위기를 담았습니다.
+      </p>
+    </div>
+    <img src="../img/illust/p_illust_8.jpg">
+  </div>
+
+<!--BUTTEN-->
+  <div class="back">
+    <a href="../index.html#here_4"><div class= "arr2">   
+      <div class= "arr2-1"></div>
+      <div class= "arr2-2"></div>
+      </div>
+    </a>
+    
+  </div>
+  
+  <a href="../page/illust_7.html"><div class= "next2">
+    <div class="arr1-2"></div>
+    <span>Prev</span>
+    </div>
+  </a>
+  
+</body>
+</html>

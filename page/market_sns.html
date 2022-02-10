@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <title>marketing web design</title>
+</head>
+
+<body>
+    <style>
+        @font-face {
+            font-family: ProximaNova;
+            src: url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_1_0.eot);
+            src: url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_1_0.eot?#iefix) format("embedded-opentype"), url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_1_0.woff2) format("woff2"), url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_1_0.woff) format("woff"), url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_1_0.ttf) format("truetype"), url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_1_0.svg#wf) format("svg");
+            font-weight: 300;
+            font-style: normal
+        }
+        
+        @font-face {
+            font-family: ProximaNova;
+            src: url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_4_0.eot);
+            src: url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_4_0.eot?#iefix) format("embedded-opentype"), url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_4_0.woff2) format("woff2"), url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_4_0.woff) format("woff"), url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_4_0.ttf) format("truetype"), url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_4_0.svg#wf) format("svg");
+            font-weight: 400;
+            font-style: normal
+        }
+        
+        @font-face {
+            font-family: ProximaNova;
+            src: url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_5_0.eot);
+            src: url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_5_0.eot?#iefix) format("embedded-opentype"), url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_5_0.woff2) format("woff2"), url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_5_0.woff) format("woff"), url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_5_0.ttf) format("truetype"), url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_5_0.svg#wf) format("svg");
+            font-weight: 700;
+            font-style: normal
+        }
+        /*webfont*/
+        
+        body,
+        * {
+            margin: 0 auto;
+            text-decoration: none;
+            color: #363636;
+        }
+        
+        h1 {
+            font-family: 'ProximaNova';
+            font-size: 5em;
+            line-height: 1em;
+        }
+        
+        h2 {
+            font-family: 'ProximaNova';
+        }
+        
+        p {
+            font-family: 'Noto Sans KR', sans-serif;
+            line-height: 1.8em;
+        }
+        
+        #location span {
+            display: block;
+            color: #0075FF;
+            font-weight: bold;
+            padding: 20px 0 100px 3%;
+            font-family: 'ProximaNova';
+        }
+        
+        .arr2 {
+            z-index: 2;
+            top: 5%;
+            right: 3%;
+            transition: all 0.3s ease-in-out;
+            position: fixed;
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.3);
+            float: right;
+        }
+        
+        .arr2-1 {
+            width: 40px;
+            height: 40px;
+            border-width: 0 2px 0 0;
+            border-style: solid;
+            transform: rotate(45deg);
+            position: absolute;
+            bottom: 40%;
+            right: 39%;
+        }
+        
+        .arr2-2 {
+            width: 40px;
+            height: 40px;
+            border-width: 2px 0 0 0;
+            border-style: solid;
+            transform: rotate(45deg);
+            position: absolute;
+            top: 36%;
+            right: 40%;
+        }
+        
+        .warp {
+            position: relative;
+        }
+        
+        .text {
+            z-index: 3;
+            position: absolute;
+            left: 15%;
+            font-family: 'Noto Sans KR', sans-serif;
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: column;
+            font-weight: 400;
+            width: 40%;
+        }
+        
+        .img img {
+            z-index: 2;
+            width: 42%;
+            position: absolute;
+            right: 15%;
+            margin: 0;
+        }
+        
+        img {
+            z-index: 1;
+            top: 100px;
+            width: 100%;
+            min-width: 300px;
+            margin-top: 35%;
+        }
+        
+        .text p {
+            width: 60%;
+            padding-top: 30px;
+        }
+        
+        .text h1,
+        p {
+            margin: 0;
+        }
+        
+        .text span {
+            font-weight: 100;
+        }
+        
+        @media screen and (max-width: 1200px) {
+            .text {
+                font-size: 0.85em;
+                text-align: center;
+                left: 0;
+                justify-content: center;
+                width: 50%;
+                position: static;
+            }
+            .text p {
+                width: 100%;
+            }
+            .text h1 {
+                font-size: 3em;
+                line-height: 1.1em;
+            }
+            .img img {
+                margin: 20% auto;
+                width: 70%;
+            }
+            img {
+                margin-top: 1000px;
+            }
+            .arr2 {
+                z-index: 2;
+                top: 2%;
+                right: 3%;
+                transition: all 0.3s ease-in-out;
+                position: fixed;
+                width: 45px;
+                height: 45px;
+                border-radius: 50%;
+                background-color: rgba(255, 255, 255, 0.3);
+                float: right;
+            }
+            .arr2-1 {
+                width: 33px;
+                height: 33px;
+                border-width: 0 2px 0 0;
+                border-style: solid;
+                transform: rotate(45deg);
+                position: absolute;
+                bottom: 40%;
+                right: 35%;
+            }
+            .arr2-2 {
+                width: 33px;
+                height: 33px;
+                border-width: 2px 0 0 0;
+                border-style: solid;
+                transform: rotate(45deg);
+                position: absolute;
+                top: 36%;
+                right: 37%;
+            }
+        }
+        
+        @media screen and (max-width: 768px) {
+            .text {
+                width: 80%
+            }
+            .img img {
+                display: none;
+            }
+            img {
+                margin-top: 300px;
+            }
+        }
+    </style>
+
+    <div class="wrap">
+        <div id="location"><span>Main work > Marketing Web Design</span></div>
+        <div class="text">
+            <h1><span>Arizehome</span><br>SNS Marketing</h1>
+            <p>주식회사 웹스의 아리재홈 SNS 홍보 활동입니다. 생활소품의 반디즈, 워터필터와 공기청정기를 판매하는 닥터오플러스 브랜드 상품의 내용으로 진행했습니다.
+            </p>
+        </div>
+        <div class="img">
+            <img src="../img/marketing/p_sns1.png">
+        </div>
+        <img src="../img/marketing/p_sns.jpg">
+    </div>
+
+    <div class="back">
+        <a href="../index.html#here_2">
+            <div class="arr2">
+                <div class="arr2-1"></div>
+                <div class="arr2-2"></div>
+            </div>
+        </a>
+
+
+</body>
+
+</html>

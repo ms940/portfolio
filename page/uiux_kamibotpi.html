@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <title>uiux</title>
+</head>
+
+<body>
+
+    <style>
+        @font-face {
+            font-family: ProximaNova;
+            src: url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_1_0.eot);
+            src: url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_1_0.eot?#iefix) format("embedded-opentype"), url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_1_0.woff2) format("woff2"), url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_1_0.woff) format("woff"), url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_1_0.ttf) format("truetype"), url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_1_0.svg#wf) format("svg");
+            font-weight: 300;
+            font-style: normal
+        }
+        
+        @font-face {
+            font-family: ProximaNova;
+            src: url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_4_0.eot);
+            src: url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_4_0.eot?#iefix) format("embedded-opentype"), url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_4_0.woff2) format("woff2"), url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_4_0.woff) format("woff"), url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_4_0.ttf) format("truetype"), url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_4_0.svg#wf) format("svg");
+            font-weight: 400;
+            font-style: normal
+        }
+        
+        @font-face {
+            font-family: ProximaNova;
+            src: url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_5_0.eot);
+            src: url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_5_0.eot?#iefix) format("embedded-opentype"), url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_5_0.woff2) format("woff2"), url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_5_0.woff) format("woff"), url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_5_0.ttf) format("truetype"), url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_5_0.svg#wf) format("svg");
+            font-weight: 700;
+            font-style: normal
+        }
+        /*webfont*/
+        
+        body,
+        *,
+        a {
+            margin: 0 auto;
+            text-decoration: none;
+            color: #363636;
+        }
+        
+        h1 {
+            font-family: 'ProximaNova';
+            font-size: 2.5em;
+        }
+        
+        h2 {
+            font-family: 'ProximaNova';
+        }
+        
+        p {
+            font-family: 'Noto Sans KR', sans-serif;
+            line-height: 1.8em;
+        }
+        
+        .text {
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight: 400;
+        }
+        
+        #location span {
+            display: block;
+            color: #0075FF;
+            font-weight: bold;
+            padding: 20px 0 200px 3%;
+            font-family: 'ProximaNova';
+        }
+        /*
+      i     {z-index: 2; top: 5%; right: 3%; position: fixed; float: left;
+            transition: all 0.3s ease-in-out; font-size: 2em;}*/
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: 0;
+        }
+        
+        .img img {
+            width: 100%;
+            background-color: #eeeeee;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            padding: 0;
+            margin: 0 auto;
+            font-size: 0;
+        }
+        /*
+      .back {display: flex; justify-content: center; align-items: center;}
+      */
+        
+        .arr {
+            width: 40px;
+            height: 40px;
+            border-width: 1px 1px 0 0;
+            border-style: solid;
+            transform: rotate(45deg);
+            transition: all 0.3s ease-in-out;
+        }
+        
+        .arr1-2 {
+            width: 40px;
+            height: 40px;
+            border-width: 1px 1px 0 0;
+            border-style: solid;
+            transform: rotate(225deg);
+            transition: all 0.3s ease-in-out;
+        }
+        
+        .arr2 {
+            z-index: 2;
+            top: 5%;
+            right: 3%;
+            transition: all 0.3s ease-in-out;
+            position: fixed;
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.3);
+            float: right;
+        }
+        
+        .arr2-1 {
+            width: 40px;
+            height: 40px;
+            border-width: 0 2px 0 0;
+            border-style: solid;
+            transform: rotate(45deg);
+            position: absolute;
+            bottom: 40%;
+            right: 39%;
+        }
+        
+        .arr2-2 {
+            width: 40px;
+            height: 40px;
+            border-width: 2px 0 0 0;
+            border-style: solid;
+            transform: rotate(45deg);
+            position: absolute;
+            top: 36%;
+            right: 40%;
+        }
+        
+        .next {
+            z-index: 2;
+            right: 5%;
+            bottom: 10%;
+            position: fixed;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+        
+        .next2 {
+            z-index: 2;
+            left: 5%;
+            bottom: 10%;
+            position: fixed;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+        
+        .text {
+            min-width: 280px;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            max-width: 52%;
+            margin-top: 50px;
+        }
+        
+        .text div {
+            flex: 1 40%;
+            min-width: 280px;
+            margin: 35px 10% 0 0;
+        }
+        
+        .text div:last-child {
+            margin-right: 0
+        }
+        
+        .text div:nth-child(2) {
+            margin-right: 0
+        }
+        
+        .text h4 {
+            margin-bottom: 4px;
+        }
+        
+        .t4 .keyword {
+            width: 100%;
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            margin-top: 15px;
+        }
+        
+        .t4 span {
+            display: block;
+            width: 48%;
+            background-color: #EBEBEB;
+            margin-top: 5px;
+            padding: 9px 0;
+            text-align: center;
+        }
+        
+        .t1 h4 {
+            line-height: 1.8em;
+        }
+        
+        .title img {
+            width: 38px;
+        }
+        
+        .title h1 {
+            margin: 0;
+            height: 38px;
+            width: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .use {
+            margin: 0;
+            height: 38px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+        
+        .title {
+            min-width: 280px;
+            max-width: 52%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .use img {
+            margin: 0;
+        }
+        /*contents*/
+        
+        .exp {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 52%;
+            flex-wrap: wrap;
+            padding: 10% 0;
+        }
+        
+        .exp span {
+            font-weight: 100;
+        }
+        
+        .exp h2,
+        .exp2 h2,
+        .exp1_3 h2,
+        .exp1_2 h2 {
+            margin-bottom: 10px;
+        }
+        
+        .exp1_2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 52%;
+            flex-wrap: wrap;
+            padding: 10% 0;
+        }
+        
+        .exp1_3 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 52%;
+            flex-wrap: wrap;
+            padding: 10% 0 30px 0;
+        }
+        
+        .img_text {
+            width: 45%;
+            min-width: 300px;
+            padding-top: 30px
+        }
+        
+        .exp2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 52%;
+            padding: 5% 0;
+        }
+        
+        .img_text2 {
+            width: 55%;
+            min-width: 300px;
+            padding: 30px 0;
+        }
+        
+        .exp img {
+            min-width: 375px;
+        }
+        
+        .exp1_2 img {
+            min-width: 100px;
+        }
+        
+        .D_system {
+            min-width: 300px;
+        }
+        
+        .video_wrap {
+            width: 100%;
+            height: 70%;
+            min-height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 10% 0 20% 0;
+        }
+        
+        .cover {
+            width: 80%;
+            min-width: 370px;
+            max-width: 1500px;
+            height: 450px;
+            background-color: #4BC0C0;
+        }
+        
+        .frame {
+            width: 70%;
+            min-width: 300px;
+            max-width: 890px;
+            height: auto;
+            margin: 10% auto;
+        }
+        
+        @media screen and (max-width: 768px) {
+            .wrap {
+                font-size: 0.85em;
+                margin: 0 auto;
+            }
+            .arr {
+                width: 15px;
+                height: 15px;
+                border-width: 2.5px 2.5px 0 0;
+                transition: all 0.3s ease-in-out;
+            }
+            .arr1-2 {
+                width: 15px;
+                height: 15px;
+                border-width: 2.5px 2.5px 0 0;
+                transition: all 0.3s ease-in-out;
+            }
+            .next span,
+            .next2 span {
+                display: none;
+            }
+            .next {
+                right: 6%;
+                bottom: 5%;
+            }
+            .next2 {
+                left: 6%;
+                bottom: 5%;
+            }
+            #location span {
+                padding-bottom: 100px;
+            }
+            .arr2 {
+                z-index: 2;
+                top: 2%;
+                right: 3%;
+                transition: all 0.3s ease-in-out;
+                position: fixed;
+                width: 45px;
+                height: 45px;
+                border-radius: 50%;
+                background-color: rgba(255, 255, 255, 0.3);
+                float: right;
+            }
+            .arr2-1 {
+                width: 33px;
+                height: 33px;
+                border-width: 0 2px 0 0;
+                border-style: solid;
+                transform: rotate(45deg);
+                position: absolute;
+                bottom: 40%;
+                right: 35%;
+            }
+            .arr2-2 {
+                width: 33px;
+                height: 33px;
+                border-width: 2px 0 0 0;
+                border-style: solid;
+                transform: rotate(45deg);
+                position: absolute;
+                top: 36%;
+                right: 37%;
+            }
+            .use {
+                width: 100px;
+            }
+            .use img {
+                width: 45%;
+            }
+            .D_system {
+                text-align: center;
+            }
+            .cover {
+                height: 255px;
+            }
+        }
+    </style>
+
+
+
+
+
+
+
+    <div class="wrap">
+        <div id="location"><span>Main work > Ui/Ux > Design</span></div>
+
+        <div class="title">
+            <h1>KAMIBOT Pi</h1><span class="use">
+    <img src="../img/use_4.png">
+    </span>
+        </div>
+        <div class="text">
+
+            <div class="t1">
+                <h4>주식회사 삼쩜일사는 어린이 코딩교육 로봇과 교육 커리큘럼을 개발합니다. 로봇 ‘카미봇’을 주 제품으로, 카미봇의 업그레이드 버전인 ‘카미봇 파이’를 개발하는 단계에서 킥스타터 클라우드 펀딩을 시작했습니다. 이 웹페이지는 제품의 홍보와 후원을 받기 위한 목적으로 제작한 프로젝트입니다.</h4>
+            </div>
+
+            <div class="t2">
+                <h4>작업 기여도</h4>
+                <p><strong>기획팀</strong>&nbsp;카피라이팅 100%<br>
+                    <strong>본인</strong>&nbsp;디자인 컨셉 100%, 웹 구조 설계 100%, 화면 설계 100%
+                </p>
+            </div>
+
+            <div class="t3">
+                <h4>디자인</h4>
+                <p>모바일로 접속해서 볼 수 있도록 반응형을 고려한 레이아웃을 제작했습니다. 프로모션 형태의 프로젝트로 방문자의 인상에 남을 수 있는 모션을 넣었지만, 내용을 전달하는데 있어 방해받지 않도록 복잡하지 않은 레이아웃을 사용해 최대한 가독성과 퍼포먼스를 함께 이끌어가고자 했습니다.
+                </p>
+            </div>
+
+            <div class="t4">
+                <h4>키워드</h4>
+                <div class="keyword">
+                    <span>#퍼포먼스</span><span>#역동적인</span><span>#정보전달</span><span>#귀여운</span>
+                    <span>#어린이</span><span>#교육</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="video_wrap">
+            <div class="cover">
+                <div class="frame">
+                    <div style="padding:56.25% 0 0 0;position:relative;">
+                        <iframe src="https://player.vimeo.com/video/672269411?h=0e6759e638&autoplay=1&&muted=1&loop=1&color=4BC0C0&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%; border: 8px solid #363636; border-radius:20px;" frameborder="0"
+                            allow="autoplay; fullscreen; allow=autoplay; picture-in-picture" allowfullscreen>
+    </iframe></div>
+                    <script src="https://player.vimeo.com/api/player.js"></script>
+                </div>
+            </div>
+        </div>
+        <!--intro video-->
+
+
+
+        <!--TEXT AREA-->
+        <div class="img">
+            <img src="../img/uiux/kamibotpi/p_kamibotpi1.jpg">
+            <img src="../img/uiux/kamibotpi/p_kamibotpi2.jpg">
+        </div>
+
+        <div class="exp1_2">
+            <!--MOTION IMG--><img src="../img/uiux/kamibotpi/kamibotpi_mot_1.gif">
+            <div class="img_text">
+                <h2>Pager Point</h2>
+                <p>이미지가 넘어가는 페이저 역할로, 시각적인 디자인 요소를 추가하여 사용자에게 페이지 수를 알리면서 화면 전환 모션에 이어 전체적인 모션의 완성도를 높이고자 했습니다.</p>
+            </div>
+        </div>
+        <div class="img">
+            <img src="../img/uiux/kamibotpi/p_kamibotpi3.jpg">
+        </div>
+        <div class="exp">
+            <!--MOTION IMG--><img src="../img/uiux/kamibotpi/kamibotpi_mot_2.gif">
+            <div class="img_text">
+                <h2>Sense of space</h2>
+                <p>한 페이지에 많은 정보를 보이는 것 보다 정보를 나눠서 제시하는 것이 전달력이 좋다고 생각했습니다. 2개 항목의 커리큘럼 특징 7가지를 두 페이지로 나누어 모션으로 공간감을 줌으로써, 같은 페이지에서 내용을 간추려 볼 수 있는 듯한 구성을 했습니다.</p>
+            </div>
+        </div>
+        <div class="img">
+            <img src="../img/uiux/kamibotpi/p_kamibotpi4.jpg">
+        </div>
+        <div class="exp">
+            <!--MOTION IMG--><img src="../img/uiux/kamibotpi/kamibotpi_mot_3.gif">
+            <div class="img_text">
+                <h2>Slide Detail Image</h2>
+                <p>제품 스펙을 보는 중요한 페이지입니다. 슬라이드를 이용하여 각도에 따라 제품을 살펴볼 수 있고 마우스 오버링을 통해 부위별 명칭을 볼 수 있게 구성했습니다.</p>
+            </div>
+        </div>
+        <div class="img">
+            <img src="../img/uiux/kamibotpi/p_kamibotpi5.jpg">
+        </div>
+        <div class="exp">
+            <h1 class="D_system"><span>KAMIBOT Pi</span><br>DESIGN SYSTEM</h1>
+            <div class="img_text">
+                <h2>Categories And Sections</h2>
+                <p>6개의 카테고리 또는 섹션으로 메인 페이지에서 위, 아래 스크롤시 1 페이지씩 이동합니다. 메뉴바의 카테고리 버튼 클릭시 스크롤 형태로 페이지가 이동합니다.</p>
+            </div>
+        </div>
+        <div class="img">
+            <img src="../img/uiux/kamibotpi/p_kamibotpi6.jpg">
+        </div>
+        <div class="exp1_3">
+            <div class="img_text">
+                <h2>Grid System</h2>
+                <p>
+                    PC : <strong>Collumns</strong> 12 / 115px, <strong>Gutter</strong> 30px, <strong>Margin</strong> 105px
+                    <br>Mobile : <strong>Collumns</strong> 6 / 40px, <strong>Gutter</strong> 16px, <strong>Margin</strong> 20px
+                </p>
+            </div>
+        </div>
+        <div class="img">
+            <img src="../img/uiux/kamibotpi/p_kamibotpi7.jpg">
+            <img src="../img/uiux/kamibotpi/p_kamibotpi8.jpg">
+        </div>
+        <div class="exp2">
+            <div class="img_text2">
+                <h2>Font and Color</h2>
+                <p>가독성 좋은 고딕계열 서체로 통일했습니다. 타이틀이자 타이포그래피로 팝핀스 서체를 사용하여 주목성을 가지면서 모션그래픽으로 사용한 라운드 도형과 조화롭게 구성되도록 했습니다. 본문 서체는 로보토를 사용해 가독성을 유지했습니다. 컬러는기업의 메인컬러 민트색과 어린이 코딩 컨셉에 어울리면서 민트색과 어울리는 옐로우를 사용했습니다.</p>
+            </div>
+        </div>
+
+        <div class="img">
+            <img src="../img/uiux/kamibotpi/p_kamibotpi9.jpg">
+        </div>
+        <!--IMG AREA-->
+    </div>
+
+
+    <!--BUTTEN-->
+    <div class="back">
+        <a href="../index.html#here_1">
+            <div class="arr2">
+                <div class="arr2-1"></div>
+                <div class="arr2-2"></div>
+            </div>
+        </a>
+
+    </div>
+
+
+    <a href="../page/uiux_kamiblock.html">
+        <div class="next">
+            <span>Next</span>
+            <div class="arr"></div>
+        </div>
+    </a>
+
+    <a href="../page/uiux_sunway.html">
+        <div class="next2">
+            <div class="arr1-2"></div>
+            <span>Prev</span>
+        </div>
+    </a>
+
+
+
+</body>
+
+</html>

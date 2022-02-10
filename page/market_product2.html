@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <title>marketing web design</title>
+</head>
+
+<body>
+    <style>
+        @font-face {
+            font-family: ProximaNova;
+            src: url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_1_0.eot);
+            src: url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_1_0.eot?#iefix) format("embedded-opentype"), url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_1_0.woff2) format("woff2"), url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_1_0.woff) format("woff"), url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_1_0.ttf) format("truetype"), url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_1_0.svg#wf) format("svg");
+            font-weight: 300;
+            font-style: normal
+        }
+        
+        @font-face {
+            font-family: ProximaNova;
+            src: url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_4_0.eot);
+            src: url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_4_0.eot?#iefix) format("embedded-opentype"), url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_4_0.woff2) format("woff2"), url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_4_0.woff) format("woff"), url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_4_0.ttf) format("truetype"), url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_4_0.svg#wf) format("svg");
+            font-weight: 400;
+            font-style: normal
+        }
+        
+        @font-face {
+            font-family: ProximaNova;
+            src: url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_5_0.eot);
+            src: url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_5_0.eot?#iefix) format("embedded-opentype"), url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_5_0.woff2) format("woff2"), url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_5_0.woff) format("woff"), url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_5_0.ttf) format("truetype"), url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_5_0.svg#wf) format("svg");
+            font-weight: 700;
+            font-style: normal
+        }
+        /*webfont*/
+        
+        body,
+        *,
+        a {
+            margin: 0 auto;
+            text-decoration: none;
+            color: #363636;
+        }
+        
+        h1 {
+            font-family: 'ProximaNova';
+            font-size: 2.5em;
+        }
+        
+        h2 {
+            font-family: 'ProximaNova';
+        }
+        
+        p {
+            font-family: 'Noto Sans KR', sans-serif;
+            line-height: 1.8em;
+        }
+        
+        .text {
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight: 400;
+        }
+        
+        #location span {
+            display: block;
+            color: #0075FF;
+            font-weight: bold;
+            padding: 20px 0 200px 3%;
+            font-family: 'ProximaNova';
+        }
+        
+        .arr {
+            width: 40px;
+            height: 40px;
+            border-width: 1px 1px 0 0;
+            border-style: solid;
+            transform: rotate(45deg);
+            transition: all 0.3s ease-in-out;
+        }
+        
+        .arr1-2 {
+            width: 40px;
+            height: 40px;
+            border-width: 1px 1px 0 0;
+            border-style: solid;
+            transform: rotate(225deg);
+            transition: all 0.3s ease-in-out;
+        }
+        
+        .arr2 {
+            z-index: 2;
+            top: 5%;
+            right: 3%;
+            transition: all 0.3s ease-in-out;
+            position: fixed;
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.3);
+            float: right;
+        }
+        
+        .arr2-1 {
+            width: 40px;
+            height: 40px;
+            border-width: 0 2px 0 0;
+            border-style: solid;
+            transform: rotate(45deg);
+            position: absolute;
+            bottom: 40%;
+            right: 39%;
+        }
+        
+        .arr2-2 {
+            width: 40px;
+            height: 40px;
+            border-width: 2px 0 0 0;
+            border-style: solid;
+            transform: rotate(45deg);
+            position: absolute;
+            top: 36%;
+            right: 40%;
+        }
+        
+        .next {
+            z-index: 2;
+            right: 5%;
+            bottom: 10%;
+            position: fixed;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+        
+        .next2 {
+            z-index: 2;
+            left: 5%;
+            bottom: 10%;
+            position: fixed;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+        
+        .wrap2 {
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            flex-direction: column;
+        }
+        
+        .button ul {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            align-items: center;
+        }
+        
+        .button li {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            align-items: center;
+            margin-right: 30px;
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+        
+        .button li a {
+            font-weight: 500;
+            color: #363636;
+            cursor: crosshair;
+        }
+        
+        iframe {
+            border: 0;
+            margin: 30px 0 100px 0;
+            min-width: 370px;
+        }
+        
+        .title {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+            align-items: center;
+            flex-wrap: wrap;
+            margin: 100px 0 100px 0;
+        }
+        
+        .title2 {
+            min-width: 280px;
+            width: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+            flex-direction: column;
+        }
+        
+        h1 {
+            margin: 0;
+            height: 38px;
+            text-align: center;
+        }
+        
+        .text {
+            min-width: 280px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            max-width: 80%;
+        }
+        
+        .text .t2 {
+            margin-top: 35px;
+        }
+        
+        .text h4 {
+            margin-bottom: 4px;
+        }
+        
+        .title img {
+            min-width: 370px;
+            margin: 0 0 5% 0;
+            padding: 0;
+        }
+        
+        .wrap span {
+            font-weight: 100;
+        }
+        
+        @media screen and (max-width: 768px) {
+            .wrap {
+                font-size: 0.85em;
+                margin: 0 auto;
+            }
+            .arr {
+                width: 15px;
+                height: 15px;
+                border-width: 2.5px 2.5px 0 0;
+                transition: all 0.3s ease-in-out;
+            }
+            .arr1-2 {
+                width: 15px;
+                height: 15px;
+                border-width: 2.5px 2.5px 0 0;
+                transition: all 0.3s ease-in-out;
+            }
+            .next span,
+            .next2 span {
+                display: none;
+            }
+            .next {
+                right: 6%;
+                bottom: 5%;
+            }
+            .next2 {
+                left: 6%;
+                bottom: 5%;
+            }
+            #location span {
+                padding-bottom: 100px;
+            }
+            .arr2 {
+                z-index: 2;
+                top: 2%;
+                right: 3%;
+                transition: all 0.3s ease-in-out;
+                position: fixed;
+                width: 45px;
+                height: 45px;
+                border-radius: 50%;
+                background-color: rgba(255, 255, 255, 0.3);
+                float: right;
+            }
+            .arr2-1 {
+                width: 33px;
+                height: 33px;
+                border-width: 0 2px 0 0;
+                border-style: solid;
+                transform: rotate(45deg);
+                position: absolute;
+                bottom: 40%;
+                right: 35%;
+            }
+            .arr2-2 {
+                width: 33px;
+                height: 33px;
+                border-width: 2px 0 0 0;
+                border-style: solid;
+                transform: rotate(45deg);
+                position: absolute;
+                top: 36%;
+                right: 37%;
+            }
+            iframe {
+                height: 500px;
+            }
+        }
+    </style>
+
+
+
+    <div class="wrap">
+        <div id="location"><span>Main work > Marketing Web Design</span></div>
+        <h1><span>Arizehome</span> A Lounge</h1>
+        <div class="title">
+            <img src="http://t11010.dothome.co.kr/mg/marketing/p_product2.jpg">
+            <div class="title2">
+                <div class="text">
+                    <div class="t1">
+                        <h4>작업 기여도</h4>
+                        <p><strong>본인</strong>&nbsp;카피라이팅 100%, 내용전개 기획 100%, 컨셉 기획 100%, 디자인 작업 100%, 컨셉 기획 100%
+                        </p>
+                    </div>
+
+                    <div class="t2">
+                        <h4>디자인</h4>
+                        <p>아리재홈 브랜드 중 하나인 '반디즈' 브랜드의 시계 라인 상세페이지 디자인입니다. 원목 소재 감성의 제품으로, 심플함을 추구하면서 제품의 고유 감성은 그대로 느낄 수 있는 방향으로 디자인진행했습니다.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="wrap2">
+        <iframe src="../page/m_product_detail2.html" width="50%" height="800px" name="i"></iframe>
+    </div>
+    <!--BUTTEN-->
+    <div class="back">
+        <a href="../index.html#here_2">
+            <div class="arr2">
+                <div class="arr2-1"></div>
+                <div class="arr2-2"></div>
+            </div>
+        </a>
+
+    </div>
+
+
+    <a href="../page/market_product3.html">
+        <div class="next">
+            <span>Next</span>
+            <div class="arr"></div>
+        </div>
+    </a>
+
+    <a href="../page/market_product1.html">
+        <div class="next2">
+            <div class="arr1-2"></div>
+            <span>Prev</span>
+        </div>
+    </a>
+
+</body>
+
+</html>

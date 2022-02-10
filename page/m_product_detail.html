@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>product_detail_img</title>
+</head>
+
+<body>
+    <style>
+        body,
+        * {
+            margin: 0 auto;
+            text-decoration: none;
+            color: #363636;
+            overscroll-behavior: contain;
+        }
+        
+        .scroll-box {
+            height: 264px;
+            overflow-x: hidden;
+            overflow-y: auto;
+        }
+        
+         ::-webkit-scrollbar {
+            width: 10px;
+        }
+        
+         ::-webkit-scrollbar-track {
+            background-color: #eeeeee;
+        }
+        
+         ::-webkit-scrollbar-thumb {
+            background: #0075FF;
+            border-radius: 0;
+        }
+        
+         ::-webkit-scrollbar-button:start:decrement,
+         ::-webkit-scrollbar-button:end:increment {
+            display: block;
+            height: 0;
+            background-color: transparent;
+        }
+        
+        img {
+            width: 100%;
+            max-width: 600px;
+            margin: 150px 0 150px 0;
+            font-size: 0;
+            padding: 0;
+        }
+        
+        #wrap1 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #303008;
+            flex-direction: column;
+            flex-wrap: wrap;
+        }
+        
+        #wrap2 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #3b2826;
+            flex-direction: column;
+            flex-wrap: wrap;
+        }
+        
+        #wrap3 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #363026;
+            flex-direction: column;
+            flex-wrap: wrap;
+        }
+        
+        #wrap4 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #2e2b30;
+            flex-direction: column;
+            flex-wrap: wrap;
+        }
+        
+        .button {
+            width: 40%;
+            min-width: 320px;
+        }
+        
+        .button ul {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+        }
+        
+        .button li {
+            list-style-type: none;
+            text-align: center;
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+        
+        .button li a {
+            width: 100%;
+            color: white;
+            cursor: crosshair;
+        }
+        
+        .wrap_1 {
+            width: 100%;
+            height: auto;
+            position: relative;
+        }
+        
+        .wrap_2 {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #181818;
+            height: 50px;
+            position: fixed;
+            top: 0;
+        }
+        
+        @media screen and (max-width: 768px) {
+            .button li {
+                font-size: 0.85em;
+            }
+        }
+    </style>
+
+
+
+    <div class="wrap_1">
+        <div class="wrap_2">
+            <div class="button">
+                <ul>
+                    <li><a href="../page/m_product_detail.html#wrap1" target="i">몽글잎새</a></li>
+                    <li><a href="../page/m_product_detail.html#wrap2" target="i">바닐라우드 수</a></li>
+                    <li><a href="../page/m_product_detail.html#wrap3" target="i">벤자민</a></li>
+                    <li><a href="../page/m_product_detail.html#wrap4" target="i">아이비</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="wrap1">
+            <img src="http://t11010.dothome.co.kr/img/marketing/detail_1.jpg">
+        </div>
+        <div id="wrap2">
+            <img src="http://t11010.dothome.co.kr/img/marketing/detail_2.jpg">
+        </div>
+        <div id="wrap3">
+            <img src="http://t11010.dothome.co.kr/img/marketing/detail_3.jpg">
+        </div>
+        <div id="wrap4">
+            <img src="http://t11010.dothome.co.kr/img/marketing/detail_4.jpg">
+        </div>
+    </div>
+
+</body>
+
+</html>
