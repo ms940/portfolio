@@ -461,7 +461,7 @@ p {
 .back_bg img {
     position: absolute;
     max-width: 100vw;
-    top: 200px;
+    top: 180px;
 }
 
 .back_bg:hover {
@@ -586,12 +586,6 @@ a,
     .swiper-slide .back_bg {
         height: 200px;
     }
-    .title3 .back_bg {
-        z-index: 1;
-    }
-    .title3 .back_bg img {
-        z-index: 2;
-    }
     .title3 .back_bg a {
         z-index: 3;
         text-align: center;
@@ -647,7 +641,7 @@ a,
         height: 400px;
     }
     .back_bg img {
-        top: 30%;
+        top: 33%;
     }
 }
 
