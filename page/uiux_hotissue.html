@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="../img/ico/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../img/ico/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../img/ico/favicon-16x16.png">
+    <link rel="manifest" href="../img/ico/site.webmanifest">
+    <link rel="mask-icon" href="../img/ico/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <!--favicon-->
+    <title>I'm Misoo</title>
+</head>
+
+<body>
+
+    <style>
+        @font-face {
+            font-family: ProximaNova;
+            src: url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_1_0.eot);
+            src: url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_1_0.eot?#iefix) format("embedded-opentype"), url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_1_0.woff2) format("woff2"), url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_1_0.woff) format("woff"), url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_1_0.ttf) format("truetype"), url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_1_0.svg#wf) format("svg");
+            font-weight: 300;
+            font-style: normal
+        }
+        
+        @font-face {
+            font-family: ProximaNova;
+            src: url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_4_0.eot);
+            src: url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_4_0.eot?#iefix) format("embedded-opentype"), url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_4_0.woff2) format("woff2"), url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_4_0.woff) format("woff"), url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_4_0.ttf) format("truetype"), url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_4_0.svg#wf) format("svg");
+            font-weight: 400;
+            font-style: normal
+        }
+        
+        @font-face {
+            font-family: ProximaNova;
+            src: url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_5_0.eot);
+            src: url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_5_0.eot?#iefix) format("embedded-opentype"), url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_5_0.woff2) format("woff2"), url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_5_0.woff) format("woff"), url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_5_0.ttf) format("truetype"), url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_5_0.svg#wf) format("svg");
+            font-weight: 700;
+            font-style: normal
+        }
+        /*webfont*/
+        
+        body,
+        * {
+            margin: 0 auto;
+            text-decoration: none;
+        }
+        
+        a {
+            cursor: crosshair;
+            text-decoration: none;
+            color: #363636;
+        }
+        
+        h1 {
+            font-family: 'ProximaNova';
+            font-size: 2.5em;
+        }
+        
+        h2 {
+            font-family: 'ProximaNova';
+        }
+        
+        p {
+            font-family: 'Noto Sans KR', sans-serif;
+            line-height: 1.8em;
+        }
+        
+        .text {
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight: 400;
+        }
+        
+        #location span {
+            display: block;
+            color: #0075FF;
+            font-weight: bold;
+            padding: 20px 0 200px 3%;
+            font-family: 'ProximaNova';
+        }
+        /*
+      i     {z-index: 2; top: 5%; right: 3%; position: fixed; float: left;
+            transition: all 0.3s ease-in-out; font-size: 2em;}*/
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: 0 auto;
+        }
+        .img2 img {
+            margin-top: 10%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            font-size: 0;
+        }
+        .img img {
+            width: 100%;
+            background-color: #eeeeee;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            padding: 0;
+            margin: 0 auto;
+            font-size: 0;
+        }
+        
+        .back {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .arr {
+            width: 40px;
+            height: 40px;
+            border-width: 1px 1px 0 0;
+            border-style: solid;
+            transform: rotate(45deg);
+            transition: all 0.3s ease-in-out;
+        }
+        
+        .arr1-2 {
+            width: 40px;
+            height: 40px;
+            border-width: 1px 1px 0 0;
+            border-style: solid;
+            transform: rotate(225deg);
+            transition: all 0.3s ease-in-out;
+        }
+        
+        .arr2 {
+            z-index: 2;
+            top: 5%;
+            right: 3%;
+            transition: all 0.3s ease-in-out;
+            position: fixed;
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.3);
+            float: right;
+        }
+        
+        .arr2-1 {
+            width: 40px;
+            height: 40px;
+            border-width: 0 2px 0 0;
+            border-style: solid;
+            transform: rotate(45deg);
+            position: absolute;
+            bottom: 40%;
+            right: 39%;
+        }
+        
+        .arr2-2 {
+            width: 40px;
+            height: 40px;
+            border-width: 2px 0 0 0;
+            border-style: solid;
+            transform: rotate(45deg);
+            position: absolute;
+            top: 36%;
+            right: 40%;
+        }
+        
+        .next {
+            z-index: 2;
+            right: 5%;
+            bottom: 10%;
+            position: fixed;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+        
+        .next2 {
+            z-index: 2;
+            left: 5%;
+            bottom: 10%;
+            position: fixed;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+        
+        .text {
+            min-width: 280px;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            max-width: 52%;
+            margin-top: 50px;
+        }
+        
+        .text div {
+            flex: 1 40%;
+            min-width: 280px;
+            margin: 35px 10% 0 0;
+        }
+        
+        .text div:last-child {
+            margin-right: 0
+        }
+        
+        .text div:nth-child(2) {
+            margin-right: 0
+        }
+        
+        .text h4 {
+            margin-bottom: 4px;
+        }
+        
+        .t1 h4 {
+            line-height: 1.8em;
+        }
+        
+        .t4 .keyword {
+            width: 100%;
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            margin-top: 15px;
+        }
+        
+        .t4 span {
+            display: block;
+            width: 48%;
+            background-color: #EBEBEB;
+            margin-top: 5px;
+            padding: 9px 0;
+            text-align: center;
+        }
+        
+        .title img {
+            width: 38px;
+        }
+        
+        .use,
+        .title h1 {
+            margin: 0;
+            height: 38px;
+            width: 125px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .title {
+            min-width: 280px;
+            max-width: 52%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        /*contents*/
+        
+        .exp_main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 52%;
+            flex-wrap: wrap;
+            padding: 5% 0;
+        }
+        
+        .exp {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 52%;
+            flex-wrap: wrap;
+            padding: 10% 0;
+        }
+        
+        .exp span {
+            font-weight: 100;
+        }
+        
+        .exp h2,
+        .exp2 h2,
+        .exp_main h2 {
+            margin-bottom: 10px;
+        }
+        
+        .img_text {
+            width: 45%;
+            min-width: 300px;
+            padding-top: 30px;
+        }
+        
+        .img_text1_2 {
+            width: 45%;
+            min-width: 300px;
+            padding-top: 30px;
+            margin: 0;
+        }
+        
+        .exp2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 52%;
+            padding: 5% 0;
+        }
+        
+        .img_text2 {
+            width: 55%;
+            min-width: 300px;
+            padding: 30px 0;
+        }
+        
+        .img_text3 {
+            width: 50%;
+            min-width: 300px;
+            padding: 30px 0;
+        }
+        
+        .exp img,
+        .exp_main img {
+            min-width: 375px;
+        }
+        
+        .Ph1 h1 {
+            color: #D7D7D7;
+            text-align: center;
+            margin-top: 20%;
+        }
+        
+        .Ph2 h1 {
+            color: #D7D7D7;
+            text-align: center;
+            background-color: #eeeeee;
+            padding-top: 10%;
+        }
+        
+        .D_system {
+            width: 100%;
+            min-width: 300px;
+            margin-bottom: 30px;
+        }
+        
+        .exp1_2 {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        
+        .video_wrap {
+            width: 100%;
+            height: 70%;
+            min-height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 10%;
+        }
+        
+        .cover {
+            width: 80%;
+            min-width: 370px;
+            max-width: 1500px;
+            height: 450px;
+            background-color: #A40033;
+        }
+        
+        .frame {
+            width: 70%;
+            min-width: 300px;
+            max-width: 890px;
+            height: auto;
+            margin: 10% auto;
+        }
+        
+        @media screen and (max-width: 768px) {
+            .wrap {
+                font-size: 0.85em;
+                margin: 0 auto;
+            }
+            .arr {
+                width: 15px;
+                height: 15px;
+                border-width: 2.5px 2.5px 0 0;
+                transition: all 0.3s ease-in-out;
+            }
+            .arr1-2 {
+                width: 15px;
+                height: 15px;
+                border-width: 2.5px 2.5px 0 0;
+                transition: all 0.3s ease-in-out;
+            }
+            .next span,
+            .next2 span {
+                display: none;
+            }
+            .next {
+                right: 6%;
+                bottom: 5%;
+            }
+            .next2 {
+                left: 6%;
+                bottom: 5%;
+            }
+            #location span {
+                padding-bottom: 100px;
+            }
+            .arr2 {
+                z-index: 2;
+                top: 2%;
+                right: 3%;
+                transition: all 0.3s ease-in-out;
+                position: fixed;
+                width: 45px;
+                height: 45px;
+                border-radius: 50%;
+                background-color: rgba(255, 255, 255, 0.3);
+                float: right;
+            }
+            .arr2-1 {
+                width: 33px;
+                height: 33px;
+                border-width: 0 2px 0 0;
+                border-style: solid;
+                transform: rotate(45deg);
+                position: absolute;
+                bottom: 40%;
+                right: 35%;
+            }
+            .arr2-2 {
+                width: 33px;
+                height: 33px;
+                border-width: 2px 0 0 0;
+                border-style: solid;
+                transform: rotate(45deg);
+                position: absolute;
+                top: 36%;
+                right: 37%;
+            }
+            .use {
+                width: 100px;
+            }
+            .use img {
+                width: 30%;
+            }
+            .exp_main {
+                padding: 10% 0;
+            }
+            .D_system {
+                margin-top: 20%;
+            }
+            .cover {
+                height: 255px;
+            }
+        }
+    </style>
+
+
+
+
+
+
+
+    <div class="wrap">
+        <div id="location"><span>Main work > Ui/Ux</span></div>
+
+        <div class="title">
+            <h1>Hot!issue</h1><span class="use">
+    <img src="../img/use_2.png">
+    <img src="../img/use_5.png">
+    <img src="../img/use_4.png">
+    </span>
+        </div>
+        <div class="text">
+
+            <div class="t1">
+                <h4>핫이슈는 바쁘고 지루한 현대인의 삶 속에 신속 정확한 정보공유와 소통을 위한 커뮤니티 앱입니다. 사용자가 거주하고 있는 지역의 사건을 제보하여 특정 이슈를 공유할 수 있습니다.</h4>
+                </p>
+            </div>
+
+            <div class="t2">
+                <h4>작업 기여도</h4>
+                <p><strong>개발팀</strong>&nbsp;기획 피드백 20% 개발 100%<br>
+                    <strong>본인</strong>&nbsp;디자인 컨셉 100%, 웹 구조 설계 30%, 화면 설계 100%
+                </p>
+            </div>
+
+            <div class="t3">
+                <h4>디자인</h4>
+                <p>스크린을 뜨겁게 달굴 지역별 속보를 누구보다 빨리 제보한다는 의미로 레드컬러를 사용하고 심리적 접근성을 높이기 위해 라운딩이 들어간 부드러운 느낌으로 진행했습니다.</p>
+            </div>
+
+            <div class="t4">
+                <h4>키워드</h4>
+                <div class="keyword">
+                    <span>#직관적인</span><span>#편리한</span><span>#부드러운</span><span>#깔끔한</span>
+                    <span>#라운드</span><span>#친근한</span>
+                </div>
+            </div>
+        </div>
+        <!--TEXT AREA-->
+
+
+
+        <div class="img2">
+            <img src="../img/uiux/hotissue/p_hotissue_1.jpg">
+        </div>
+        <div class="img">
+            <img src="../img/uiux/hotissue/p_hotissue_2.jpg">
+            <img src="../img/uiux/hotissue/p_hotissue_3.jpg">
+            <img src="../img/uiux/hotissue/p_hotissue_4.jpg">
+            <img src="../img/uiux/hotissue/p_hotissue_5.jpg">
+            <img src="../img/uiux/hotissue/p_hotissue_6.jpg">
+            <img src="../img/uiux/hotissue/p_hotissue_7.jpg">
+            <img src="../img/uiux/hotissue/p_hotissue_8.jpg">
+        </div>
+
+        <div class="back">
+        <a href="../index.html#here_1">
+            <div class="arr2">
+                <div class="arr2-1"></div>
+                <div class="arr2-2"></div>
+            </div>
+        </a>
+
+    </div>
+
+<a href="../page/uiux_gemstone.html">
+        <div class="next">
+            <span>Next</span>
+            <div class="arr"></div>
+        </div>
+    </a>
+    <!--BUTTEN-->
+</body>
+
+</html>

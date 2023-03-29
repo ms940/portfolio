@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 25.2.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="레이어_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+	 y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#0075FF;}
+	.st1{fill:#FFFFFF;}
+</style>
+<path class="st0" d="M396.71,512H115.3C51.62,512,0,460.38,0,396.7V115.3C0,51.62,51.62,0,115.3,0h281.4
+	C460.38,0,512,51.62,512,115.29v281.41C512,460.38,460.38,512,396.71,512z"/>
+<g>
+	<path class="st1" d="M254.51,171.35h-17.83v173.6h64.05V217.57C300.73,192.05,280.04,171.35,254.51,171.35z"/>
+	<polygon class="st1" points="452.04,235.51 452.04,167.05 383.58,167.05 	"/>
+	<path class="st1" d="M445.92,328.86l-8.81,8.79c-3.26,3.26-8.55,3.25-11.8-0.02l-87.7-87.94c-17.64-17.69-17.6-46.32,0.09-63.96
+		l8.81-8.79c3.26-3.26,8.55-3.25,11.8,0.02l87.7,87.94C463.65,282.59,463.61,311.23,445.92,328.86z"/>
+	<polygon class="st1" points="327.34,276.49 327.34,344.95 395.8,344.95 	"/>
+	<rect x="147.74" y="171.35" class="st1" width="64.05" height="173.6"/>
+	<rect x="58.79" y="171.35" class="st1" width="64.05" height="173.6"/>
+</g>
+</svg>

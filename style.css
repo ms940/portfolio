@@ -138,13 +138,14 @@ h1 {
     font-weight: 400;
     margin: 0;
     /*
-      margin: 100px 0px 0px 175px;
+    margin: 100px 0px 0px 175px;
       */
 }
 
 h2 {
-    font-size: 1.3em;
+    font-size: 1.7em;
     font-family: 'ProximaNova';
+    font-weight:normal;
     margin: 0;
 }
 
@@ -264,6 +265,7 @@ p {
 
 .item .img-box>img {
     width: 100%;
+    
 }
 
 .item h2 {

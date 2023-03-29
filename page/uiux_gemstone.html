@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="../img/ico/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../img/ico/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../img/ico/favicon-16x16.png">
+    <link rel="manifest" href="../img/ico/site.webmanifest">
+    <link rel="mask-icon" href="../img/ico/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <!--favicon-->
+    <title>I'm Misoo</title>
+</head>
+
+<body>
+
+    <style>
+        @font-face {
+            font-family: ProximaNova;
+            src: url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_1_0.eot);
+            src: url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_1_0.eot?#iefix) format("embedded-opentype"), url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_1_0.woff2) format("woff2"), url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_1_0.woff) format("woff"), url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_1_0.ttf) format("truetype"), url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_1_0.svg#wf) format("svg");
+            font-weight: 300;
+            font-style: normal
+        }
+        
+        @font-face {
+            font-family: ProximaNova;
+            src: url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_4_0.eot);
+            src: url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_4_0.eot?#iefix) format("embedded-opentype"), url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_4_0.woff2) format("woff2"), url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_4_0.woff) format("woff"), url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_4_0.ttf) format("truetype"), url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_4_0.svg#wf) format("svg");
+            font-weight: 400;
+            font-style: normal
+        }
+        
+        @font-face {
+            font-family: ProximaNova;
+            src: url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_5_0.eot);
+            src: url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_5_0.eot?#iefix) format("embedded-opentype"), url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_5_0.woff2) format("woff2"), url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_5_0.woff) format("woff"), url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_5_0.ttf) format("truetype"), url(https://d25purrcgqtc5w.cloudfront.net/dist/fonts/proximanova/302D42_5_0.svg#wf) format("svg");
+            font-weight: 700;
+            font-style: normal
+        }
+        /*webfont*/
+        body {
+            margin: 0 auto;
+            background-color: #0F1336;
+        }
+        * {
+            margin: 0 auto;
+            text-decoration: none;
+        }
+        div {
+            margin: 0 auto;
+            padding: 0;
+        }
+        
+        a {
+            cursor: crosshair;
+            text-decoration: none;
+            color: #c0c0c0;
+        }
+        
+        h1 {
+            font-family: 'ProximaNova';
+            font-size: 2.5em;
+        }
+        
+        h2 {
+            font-family: 'ProximaNova';
+        }
+        
+        p {
+            font-family: 'Noto Sans KR', sans-serif;
+            line-height: 1.8em;
+        }
+        
+        .text {
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight: 400;
+        }
+        
+        #location span {
+            display: block;
+            color: #0075FF;
+            font-weight: bold;
+            padding: 20px 0 200px 3%;
+            font-family: 'ProximaNova';
+        }
+        /*
+      i     {z-index: 2; top: 5%; right: 3%; position: fixed; float: left;
+            transition: all 0.3s ease-in-out; font-size: 2em;}*/
+        .ani_apng1, .ani_apng2, .ani_apng3, .ani_apng4 {
+            position: absolute;
+            top: 52%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .apngArea_1, .apngArea_2, .apngArea_3, .apngArea_4 {
+            position: relative;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .img2 img {
+            margin-top: 10%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            font-size: 0;
+            
+        }
+        
+        .img img {
+            width: 100%;
+            background-color: #eeeeee;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            padding: 0;
+            margin: 0 auto;
+            font-size: 0;
+            line-height: 0;
+        }
+
+        .arr {
+            width: 40px;
+            height: 40px;
+            border-width: 1px 1px 0 0;
+            border-style: solid;
+            transform: rotate(45deg);
+            transition: all 0.3s ease-in-out;
+        }
+        
+        .arr1-2 {
+            width: 40px;
+            height: 40px;
+            border-width: 1px 1px 0 0;
+            border-style: solid;
+            transform: rotate(225deg);
+            transition: all 0.3s ease-in-out;
+        }
+        
+        .arr2 {
+            z-index: 2;
+            top: 5%;
+            right: 3%;
+            transition: all 0.3s ease-in-out;
+            position: fixed;
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.3);
+            float: right;
+        }
+        
+        .arr2-1 {
+            width: 40px;
+            height: 40px;
+            border-width: 0 2px 0 0;
+            border-style: solid;
+            transform: rotate(45deg);
+            position: absolute;
+            bottom: 40%;
+            right: 39%;
+        }
+        
+        .arr2-2 {
+            width: 40px;
+            height: 40px;
+            border-width: 2px 0 0 0;
+            border-style: solid;
+            transform: rotate(45deg);
+            position: absolute;
+            top: 36%;
+            right: 40%;
+        }
+        
+        .next {
+            z-index: 2;
+            right: 5%;
+            bottom: 10%;
+            position: fixed;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+        
+        .next2 {
+            z-index: 2;
+            left: 5%;
+            bottom: 10%;
+            position: fixed;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+        .text {
+            min-width: 280px;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            max-width: 52%;
+            margin-top: 50px;
+        }
+        
+        .text div {
+            flex: 1 40%;
+            min-width: 280px;
+            margin: 35px 10% 0 0;
+        }
+        
+        .text div:last-child {
+            margin-right: 0
+        }
+        
+        .text div:nth-child(2) {
+            margin-right: 0
+        }
+        .t1, .t2, .t3{
+            color:#AAB3FF;
+        }
+        .text h4 {
+            margin-bottom: 4px;
+        }
+        
+        .t4 .keyword {
+            width: 100%;
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            margin-top: 15px;
+        }
+        .t4 h4 {
+            color:#AAB3FF;
+        }
+        .t4 span {
+            display: block;
+            width: 48%;
+            background-color: #EBEBEB;
+            margin-top: 5px;
+            padding: 9px 0;
+            text-align: center;
+        }
+        
+        .use,
+        .title h1 {
+            margin: 0;
+            height: 38px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .title {
+            min-width: 280px;
+            max-width: 52%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            color:#AAB3FF;
+        }
+        
+        .motion {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .motion img {
+            width: 20%;
+            min-width: 100px;
+            margin: 0;
+        }
+        /*contents*/
+        
+        .exp {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 52%;
+            flex-wrap: wrap;
+            padding: 10% 0;
+        }
+        
+        .exp span {
+            font-weight: 100;
+        }
+        
+        .exp h2,
+        .exp2 h2 {
+            margin-bottom: 10px;
+        }
+        
+        .img_text2 {
+            width: 55%;
+            min-width: 300px;
+        }
+        
+        .img_text {
+            width: 45%;
+            min-width: 300px;
+            padding-top: 30px
+        }
+        
+        .exp2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 52%;
+            padding: 5% 0;
+        }
+        
+        .exp3 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 52%;
+            padding: 7% 0 3% 0;
+        }
+        
+        .D_system {
+            width: 100%;
+            min-width: 300px;
+            margin-bottom: 30px;
+        }
+        @media screen and (max-width: 768px) {
+            .wrap {
+                font-size: 0.85em;
+                margin: 0 auto;
+            }
+            .arr {
+                width: 15px;
+                height: 15px;
+                border-width: 2.5px 2.5px 0 0;
+                transition: all 0.3s ease-in-out;
+            }
+            .arr1-2 {
+                width: 15px;
+                height: 15px;
+                border-width: 2.5px 2.5px 0 0;
+                transition: all 0.3s ease-in-out;
+            }
+            .next span,
+            .next2 span {
+                display: none;
+            }
+            .next {
+                right: 6%;
+                bottom: 5%;
+            }
+            .next2 {
+                left: 6%;
+                bottom: 5%;
+            }
+            #location span {
+                padding-bottom: 100px;
+            }
+            .arr2 {
+                z-index: 2;
+                top: 2%;
+                right: 3%;
+                transition: all 0.3s ease-in-out;
+                position: fixed;
+                width: 45px;
+                height: 45px;
+                border-radius: 50%;
+                background-color: rgba(255, 255, 255, 0.3);
+                float: right;
+            }
+            .arr2-1 {
+                width: 33px;
+                height: 33px;
+                border-width: 0 2px 0 0;
+                border-style: solid;
+                transform: rotate(45deg);
+                position: absolute;
+                bottom: 40%;
+                right: 35%;
+            }
+            .arr2-2 {
+                width: 33px;
+                height: 33px;
+                border-width: 2px 0 0 0;
+                border-style: solid;
+                transform: rotate(45deg);
+                position: absolute;
+                top: 36%;
+                right: 37%;
+            }
+            .use {
+                width: 75px;
+            }
+            .use img {
+                width: 45%;
+            }
+            .cover {
+                height: 255px;
+            }
+            .D_system {
+                margin-top: 20%;
+            }
+            .ani_apng1, .ani_apng2, .ani_apng3, .ani_apng4 {
+            width: 45%;
+            top: 55%;
+        }
+
+
+        }
+        /*MEDIA QUERY*/
+    </style>
+
+
+<div class="wrap">
+    <div id="location"><span>Main work > Ui/Ux</span></div>
+
+    <div class="title">
+        <h1>SPACE&nbsp;STONE</h1>
+        <span class="use">
+            <img src="../img/use_2_line.png">
+            <img src="../img/use_5_line.png">
+            <img src="../img/use_4_line.png">
+            <img src="../img/use_6.png">
+        </span>
+    </div>
+    <div class="text">
+
+        <div class="t1">
+            <h4>스페이스 스톤은 다양한 사행성 컨텐츠를 제공하는 사이트의 단기 이벤트용 게임입니다. 사용자는  6단계까지의 보석 강화에 성공하여 보상을 얻고 하루에 누적되는 별사탕(포인트)을 모두 가질 수 있는 기회를 가집니다.</h4>
+            </p>
+        </div>
+
+        <div class="t2">
+            <h4>작업 기여도</h4>
+            <p><strong>기획팀</strong>&nbsp;게임 기획초안 및 가이드 100%<br>
+                <strong>개발팀</strong>&nbsp;퍼블리싱 및 개발 100%<br>
+                <strong>본인</strong>&nbsp;게임 모션 및 이펙트 기획/제작, 화면설계, 컨셉 기획, 홍보용 3D 모델링
+            </p>
+        </div>
+
+        <div class="t3">
+            <h4>디자인</h4>
+            <p>강화를 시도할때 화려한 이펙트 애니메이션을 적용하여 실패 혹은 성공에 대한 사용자의 감정을 자극합니다.</p>
+        </div>
+
+        <div class="t4">
+            <h4>키워드</h4>
+            <div class="keyword">
+                <span>#화려한</span><span>#감성적인</span><span>#몽환</span><span>#직선의</span>
+            </div>
+        </div>
+    </div>
+    <!--TEXT AREA-->
+
+
+
+    <div class="img2">
+        <img src="../img/uiux/gemstone/p_gemstone_1.jpg">
+    </div>
+        
+        
+        
+        
+
+        </div>
+    <div class="img">
+        <img src="../img/uiux/gemstone/p_gemstone_2.jpg">
+    </div>
+    
+    <!---APNG--->
+    <div class="apngArea_1">
+        <div class="ani_apng1">
+            <img src="../img/uiux/gemstone/success.png">
+        </div>
+        <img src="../img/uiux/gemstone/p_gemstone_2-2.jpg">
+    </div>
+    <div class="apngArea_2">
+        <div class="ani_apng2">
+            <img src="../img/uiux/gemstone/fail.png">
+        </div>
+        <img src="../img/uiux/gemstone/p_gemstone_2-3.jpg">
+    </div>
+    <div class="apngArea_3">
+        <div class="ani_apng3">
+            <img src="../img/uiux/gemstone/sale.png">
+        </div>
+        <img src="../img/uiux/gemstone/p_gemstone_2-4.jpg">
+    </div>
+    <div class="apngArea_4">
+        <div class="ani_apng4">
+            <img src="../img/uiux/gemstone/success6.png">
+        </div>
+        <img src="../img/uiux/gemstone/p_gemstone_2-5.jpg">
+    </div>
+
+
+    <div class="img">
+        <img src="../img/uiux/gemstone/p_gemstone_3.jpg">
+    </div>
+
+
+    <div class="back">
+        <a href="../index.html#here_1">
+            <div class="arr2">
+                <div class="arr2-1"></div>
+                <div class="arr2-2"></div>
+            </div>
+        </a>
+
+    </div>
+
+    <a href="../page/uiux_kamibotpi.html">
+        <div class="next">
+            <span>Next</span>
+            <div class="arr"></div>
+        </div>
+    </a>
+
+    <a href="../page/uiux_hotissue.html">
+        <div class="next2">
+            <div class="arr1-2"></div>
+            <span>Prev</span>
+        </div>
+    </a>
+</body>
+
+</html>
