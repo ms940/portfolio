@@ -48,38 +48,61 @@
         
         body,
         * {
-            color: #363636;
             margin: 0 auto;
             text-decoration: none;
         }
+        body {
+            background-color: #212121;
+            color:#cecece;
+        }
         
         a {
-            color: #363636;
             cursor: crosshair;
             text-decoration: none;
+            color: #363636;
         }
         
         h1 {
             font-family: 'ProximaNova';
-            font-size: 5em;
-            line-height: 1em;
+            font-size: 2.5em;
         }
         
         h2 {
             font-family: 'ProximaNova';
         }
-
+        
         p {
             font-family: 'Noto Sans KR', sans-serif;
             line-height: 1.8em;
         }
         
+        .text {
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight: 400;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: 0;
+        }
+
+        
         #location span {
             display: block;
             color: #0075FF;
             font-weight: bold;
-            padding: 20px 0 100px 3%;
+            padding: 20px 0 200px 3%;
             font-family: 'ProximaNova';
+        }
+        
+        .arr {
+            width: 40px;
+            height: 40px;
+            border-width: 1px 1px 0 0;
+            border-style: solid;
+            transform: rotate(45deg);
+            transition: all 0.3s ease-in-out;
         }
         
         .arr2 {
@@ -117,64 +140,119 @@
             right: 40%;
         }
         
-        .warp {
-            color: #363636;
-        }
-
-        .text {
-            z-index: 3;
-            position: absolute;
-            left: 15%;
-            font-family: 'Noto Sans KR', sans-serif;
+        .next {
+            z-index: 2;
+            bottom: 100px;
+            right: 5%;
+            bottom: 10%;
+            position: fixed;
             display: flex;
-            justify-content: flex-start;
+            justify-content: flex-end;
+            align-items: center;
+        }
+        
+        .wrap2 {
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
             flex-direction: column;
-            font-weight: 400;
-            width: 40%;
         }
         
-        img {
-            z-index: 1;
-            top: 100px;
+        .button ul {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            align-items: center;
+        }
+        
+        .button li {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            align-items: center;
+            margin-right: 30px;
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+        
+        .button li a {
+            font-weight: 500;
+            color: #363636;
+            cursor: crosshair;
+        }
+        
+        .title {
             width: 100%;
-            min-width: 300px;
-            margin-top: 35%;
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+            align-items: center;
+            flex-wrap: wrap;
+            margin: 100px 0 100px 0;
         }
         
-        .text p {
-            width: 60%;
-            padding-top: 30px;
-        }
-        .text img {
-            margin-top:0;
-        }
-        
-        .text h1, h3, p {
+        .title2 {
+            min-width: 280px;
+            width: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             margin: 0;
+            padding: 0;
+            flex-direction: column;
         }
-                
-        @media screen and (max-width: 1200px) {
-            .text {
+        
+        h1 {
+            margin: 0;
+            height: 38px;
+            text-align: center;
+        }
+        
+        .text {
+            min-width: 280px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            max-width: 80%;
+        }
+        
+        .text .t1 {
+            width: 100%;
+        }
+        
+        .text .t2 {
+            width: 100%;
+            margin-top: 35px;
+        }
+        
+        .text h4 {
+            margin-bottom: 4px;
+        }
+        
+        .title img {
+            min-width: 300px;
+            padding: 35px 10px 35px 10px;
+        }
+        
+        .wrap span {
+            font-weight: 100;
+        }
+        
+        @media screen and (max-width: 768px) {
+            .wrap {
                 font-size: 0.85em;
-                text-align: center;
-                left: 0;
-                justify-content: center;
-                width: 50%;
-                position: static;
+                margin: 0 auto;
             }
-            .text p {
-                width: 100%;
+            .arr {
+                width: 15px;
+                height: 15px;
+                border-width: 2.5px 2.5px 0 0;
+                transition: all 0.3s ease-in-out;
             }
-            .text h1 {
-                font-size: 3em;
-                line-height: 1.1em;
-            }
-            .img img {
-                margin: 250px auto;
-                width: 70%;
-            }
-            img {
-                margin-top: 1000px;
+            #location span {
+                padding-bottom: 100px;
             }
             .arr2 {
                 z-index: 2;
@@ -209,30 +287,42 @@
                 right: 37%;
             }
         }
-        
-        @media screen and (max-width: 768px) {
-            .text {
-                width: 80%
-            }
-            .img img {
-                display: block;
-            }
-            img {
-                margin-top: 650px;
-            }
-        }
     </style>
+
+
 
     <div class="wrap">
         <div id="location"><span>Main work > Marketing Design</span></div>
-        <div class="text">
-            <h3>Online Used Car Platform<img src="../img/marketing/Carselon_logo.png"></h3>
-            <p>카셀론은 우즈벡을 메인으로 활동하는 사업으로, 중고차 거래 온라인 플랫폼입니다. 카셀론의 홍보에 필요한 디자인을 작업했습니다. 
-            </p>
+        <h1><span>Online Used Car Platform</h1>
+        <div class="title">
+            <img src="../img/marketing/carselon/Carselon_logo.png" style="width:28%;">
+           
+            <div class="title2">
+                <div class="text">
+                    <div class="t1">
+                        <h4>작업 기여도</h4>
+                        <p><strong>마케팅팀</strong>&nbsp;카피라이팅 100%<br>
+                            <strong>본인</strong>&nbsp;디자인 작업 100%
+                        </p>
+                    </div>
+
+                    <div class="t2">
+                        <h4>디자인</h4>
+                        <p>카셀론은 우즈벡을 메인으로 활동하는 사업으로, 중고차 거래 온라인 플랫폼입니다. 카셀론의 홍보에 필요한 디자인을 작업했습니다.
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
-        <img src="../img/marketing/p_sns.jpg">
     </div>
 
+    <div class="imgArea" style="font-size: 0;">
+        <img src="../img/marketing/carselon/market_carselon_1.jpg">
+        <img src="../img/marketing/carselon/market_carselon_2.jpg">
+        <img src="../img/marketing/carselon/market_carselon_3.jpg">
+    </div>
+
+    <!--BUTTEN-->
     <div class="back">
         <a href="../index.html#here_2">
             <div class="arr2">
@@ -241,6 +331,7 @@
             </div>
         </a>
 
+    </div>
 
 </body>
 

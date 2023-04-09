@@ -299,7 +299,7 @@ p {
 }
 
 .market img {
-    max-width: 460px
+    max-width: 600px
 }
 
 .product {
@@ -324,7 +324,7 @@ p {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #182687;
+    background-color: #E92C28;
     height: 60vh;
 }
 

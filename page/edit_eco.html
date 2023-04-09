@@ -50,7 +50,6 @@
             margin: 0 auto;
             text-decoration: none;
         }
-        
         a {
             cursor: crosshair;
             text-decoration: none;
@@ -80,6 +79,12 @@
             color: white;
         }
         
+        .imgArea {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;            
+        }
+
         img {
             max-width: 100%;
             height: auto;
@@ -100,8 +105,9 @@
             height: 40vw;
             background-repeat: no-repeat;
             background-attachment: fixed;
-            background-size: auto;
-            background-image: url('http://t11010.dothome.co.kr/img/editorial/eco_bn.jpg');
+            background-size: cover;
+            background-position: center;
+            background-image: url('../img/editorial/eco_bn.jpg');
             display: flex;
             justify-content: center;
             align-items: center;
@@ -320,7 +326,9 @@
         <div id="location"><span>Main work > Editorial</span>
 
         </div>
-        <img src="../img/editorial/p_eco.jpg">
+        <div class="imgArea">
+            <img src="../img/editorial/p_eco.jpg" style="margin-top: 13px;">
+        </div>
     </div>
 
     <!--BUTTEN-->

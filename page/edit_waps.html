@@ -79,7 +79,11 @@
             line-height: 1.8em;
             color: #192680;
         }
-        
+        .imgArea {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;            
+        }
         img {
             max-width: 100%;
             height: auto;
@@ -100,7 +104,8 @@
             height: 40vw;
             background-repeat: no-repeat;
             background-attachment: fixed;
-            background-size: auto;
+            background-size: cover;
+            background-position: center;
             background-image: url('../img/editorial/waps_bn.jpg');
             display: flex;
             justify-content: center;
@@ -310,7 +315,9 @@
                 <p><strong>팀원</strong> 캐릭터 디자인 / <strong>팀원, 본인</strong> 기획 / <strong>본인</strong> 일러스트, 편집 디자인 </p>
             </div>
         </div>
-        <img src="../img/editorial/p_waps.jpg">
+        <div class="imgArea">
+            <img src="../img/editorial/p_waps.jpg">
+        </div>
     </div>
 
     <!--BUTTEN-->

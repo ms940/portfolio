@@ -78,7 +78,11 @@
             line-height: 1.8em;
             color: white;
         }
-        
+        .imgArea {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;            
+        }
         img {
             max-width: 100%;
             height: auto;
@@ -98,7 +102,8 @@
             height: 40vw;
             background-repeat: no-repeat;
             background-attachment: fixed;
-            background-size: auto;
+            background-size: cover;
+            background-position: center;
             background-image: url('../img/editorial/pnu_bn.jpg');
             display: flex;
             justify-content: center;
@@ -316,7 +321,9 @@
         <div id="location"><span>Main work > Editorial</span>
 
         </div>
-        <img src="../img/editorial/p_pnu.jpg">
+        <div class="imgArea">
+            <img src="../img/editorial/p_pnu.jpg" style="margin-top: 13px;">
+        </div>
     </div>
 
     <!--BUTTEN-->
